@@ -19,6 +19,7 @@
     @include container(48px 48px 48px 48px, transparent);
   }
   @include desktop {
+    background-image: url('../images/hero-tablet.jpg');
     height: 720px;
   }
 

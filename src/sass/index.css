@@ -118,7 +118,7 @@ html {
 @font-face {
   font-family: "Inter";
   font-weight: 600;
-  src: url("../fonts/inter-semiBold.ttf") format("truetype");
+  src: url("../fonts/inter-semibold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inter";
@@ -403,6 +403,7 @@ html {
 }
 @media screen and (min-width: 1440px) {
   .hero {
+    background-image: url("../images/hero-tablet.jpg");
     height: 720px;
   }
 }
