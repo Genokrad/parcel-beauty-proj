@@ -1,4 +1,4 @@
-import imagePlastic from '../src/images/direction/cosmetology.png';
+import imagePlastic from './images/direction/cosmetology.png';
 
 const element = selector => document.querySelector(selector);
 const directions = element('.directions__desktop-wrapper');
