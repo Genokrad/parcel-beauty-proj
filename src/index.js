@@ -1,3 +1,5 @@
+import imagePlastic from '../src/images/direction/cosmetology.png';
+
 const element = selector => document.querySelector(selector);
 const directions = element('.directions__desktop-wrapper');
 console.log(directions);
@@ -64,7 +66,7 @@ function renderMarkup() {
   <div class="directions__card">
     <img
       class="directions__img"
-      src="./images/direction/cosmetology.png"
+      src="${imagePlastic}"
       alt="women"
     />
   </div>
