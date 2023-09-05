@@ -4,6 +4,9 @@
   padding-right: 0;
   padding-top: 72px;
   padding-bottom: 72px;
+  @include tablet {
+    padding-bottom: 90px;
+  }
 
   &__description {
     padding: 72px 24px 0 24px;

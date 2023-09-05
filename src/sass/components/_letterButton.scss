@@ -1,0 +1,11 @@
+.letter-buttton {
+  border-radius: 50%;
+  width: 33px;
+  height: 32px;
+  background-color: transparent;
+  color: var(--linguage-text);
+  &--active {
+    background-color: rgba(249, 248, 244, 0.2);
+    color: var(--white-text-color);
+  }
+}

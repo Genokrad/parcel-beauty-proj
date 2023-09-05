@@ -52,4 +52,13 @@
     margin: 0 auto;
     margin-top: 32px;
   }
+  &--header {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    grid-template-columns: 1fr;
+    font-size: 14px;
+    @include inter-font(500, var(--white-text-color));
+    padding: 11px 24px;
+    line-height: 120%;
+  }
 }

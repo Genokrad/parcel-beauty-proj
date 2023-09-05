@@ -1,5 +1,13 @@
 .header {
   background-color: var(--sec-bcg-color);
+  @include tablet {
+    height: 64px;
+  }
+  @include desktop {
+    height: 76px;
+  }
+  display: flex;
+  align-items: center;
 
   &__wrapper {
     display: grid;
@@ -7,6 +15,12 @@
     justify-content: space-between;
     grid-template-columns: 243px 24px;
     grid-template-rows: 34px;
+    @include tablet {
+      grid-template-columns: 243px 297px;
+    }
+    @include desktop {
+      grid-template-columns: 243px 425px 297px;
+    }
   }
   &__town-navigation-wrapper {
     display: grid;
@@ -15,6 +29,9 @@
 
     gap: 12px;
     max-height: 34px;
+    @include desktop {
+      gap: 24px;
+    }
   }
   &__town-navigation {
     display: grid;
@@ -34,10 +51,56 @@
       background-color: var(--link-active-color);
     }
   }
+
+  &__site-navigation {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__site-navigation-list {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 1fr;
+  }
+
+  &__site-navigation-link {
+    @include inter-font(500, var(--white-text-color));
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  &__right-side {
+    @include tablet {
+      display: grid;
+      grid-template-columns: 225px 24px;
+      grid-template-rows: 1fr;
+      gap: 24px;
+      align-items: center;
+      justify-content: end;
+    }
+    @include desktop {
+      grid-template-columns: 249;
+    }
+  }
+
+  &__button-wrapper {
+    display: none;
+    grid-template-columns: 72px 129px;
+    gap: 24px;
+    align-items: center;
+    @include tablet {
+      display: grid;
+    }
+  }
   &__hamburger {
     width: 24px;
     height: 24px;
     padding: 2px;
     fill: var(--white-text-color);
+    @include desktop {
+      display: none;
+    }
   }
 }

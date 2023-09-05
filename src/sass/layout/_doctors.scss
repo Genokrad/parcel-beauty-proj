@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: auto auto;
   @include tablet {
-    @include container(120px 48px 120px 48px, var(--bcg-color));
+    @include container(60px 48px 120px 48px, var(--bcg-color));
   }
   @include desktop {
     @include container(90px 78px 240px 78px, var(--bcg-color));

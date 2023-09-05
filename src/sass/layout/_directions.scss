@@ -10,6 +10,7 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 48px;
+
     @include desktop {
       display: none;
     }
@@ -48,6 +49,11 @@
   }
   &__img {
     margin-bottom: 32px;
+    border-radius: 48px;
+    box-shadow: 1px 25px 14px -12.5px rgba(10, 10, 23, 0.2);
+    @include tablet {
+      margin-bottom: 48px;
+    }
     @include desktop {
       margin-bottom: 0;
     }
