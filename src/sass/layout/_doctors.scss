@@ -6,7 +6,7 @@
     @include container(120px 48px 120px 48px, var(--bcg-color));
   }
   @include desktop {
-    @include container(90px 78px 120px 78px, var(--bcg-color));
+    @include container(90px 78px 240px 78px, var(--bcg-color));
     grid-template-rows: auto;
     grid-template-columns: 1fr 67.9%;
     gap: 48px;
