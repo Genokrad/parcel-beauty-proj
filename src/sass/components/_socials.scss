@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  &__list {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--white-text-color);
+    &:hover {
+      fill: var(--hover-social);
+    }
+    &:focus {
+      fill: var(--hover-social);
+    }
+  }
+}

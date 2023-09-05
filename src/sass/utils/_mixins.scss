@@ -1,0 +1,39 @@
+@mixin inter-font($weight, $color: var(--main-text-color)) {
+  font-weight: $weight;
+  font-family: "Inter", sans-serif;
+  color: $color;
+}
+
+@mixin container(
+  // $max-width: 360px,
+  $padding: 8px 16px 8px 16px,
+  $background-color: var(--bcg-color)
+) {
+  // @if $max-width {
+  //   max-width: $max-width;
+  // }
+  width: 100%;
+  margin: 0 auto;
+  @if $padding {
+    padding: $padding;
+  }
+  background-color: $background-color;
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 834px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}

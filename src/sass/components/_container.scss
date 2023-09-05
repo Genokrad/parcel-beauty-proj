@@ -1,0 +1,3 @@
+.container {
+  @include container($background-color: var(--sec-bcg-color));
+}

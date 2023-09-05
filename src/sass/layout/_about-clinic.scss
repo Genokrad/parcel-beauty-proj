@@ -1,0 +1,74 @@
+.about-clinic {
+  position: relative;
+  @include tablet {
+    height: 470px;
+  }
+  @include desktop {
+    height: 810px;
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 202px;
+    background-image: url('../images/clinic-chernivci.jpg');
+    background-size: cover;
+    @include tablet {
+      position: absolute;
+      height: 470px;
+    }
+    @include desktop {
+      height: 810px;
+    }
+  }
+  &__img-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-text-color);
+    opacity: 0.6;
+  }
+  &__description-wrapper {
+    position: relative;
+    @include container(48px 24px 48px 24px, var(--sec-bcg-color));
+    @include tablet {
+      @include container(99px 48px 99px 48px, transparent);
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+    }
+    @include desktop {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  // transform: translate(-50%, -50%);
+  &__title {
+    @include inter-font(500, var(--white-text-color));
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+    @include tablet {
+      font-size: 54px;
+      letter-spacing: -1.08px;
+      line-height: 100%;
+    }
+  }
+  &__text {
+    @include inter-font(300, var(--white-text-color));
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 140%;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}

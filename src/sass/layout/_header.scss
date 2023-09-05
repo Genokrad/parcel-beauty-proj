@@ -1,0 +1,43 @@
+.header {
+  background-color: var(--sec-bcg-color);
+
+  &__wrapper {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 243px 24px;
+    grid-template-rows: 34px;
+  }
+  &__town-navigation-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 12px;
+    max-height: 34px;
+  }
+  &__town-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2px;
+    border-radius: 44px;
+    background-color: var(--thre-bcg-color);
+  }
+  &__link {
+    display: block;
+    border-radius: 44px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 120%;
+    @include inter-font(500, var(--white-text-color));
+    &--active {
+      background-color: var(--link-active-color);
+    }
+  }
+  &__hamburger {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    fill: var(--white-text-color);
+  }
+}

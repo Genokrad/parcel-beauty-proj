@@ -1,0 +1,94 @@
+.directions {
+  @include container(48px 24px 48px 24px, var(--bcg-color));
+  @include tablet {
+    @include container(60px 56px 60px 56px, var(--bcg-color));
+  }
+  @include desktop {
+    @include container(60px 56px 90px 56px, var(--bcg-color));
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 48px;
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__desktop-wrapper {
+    display: none;
+    @include desktop {
+      display: grid;
+      grid-template-columns: 58.8% 1fr;
+      gap: 72px;
+    }
+  }
+  &__action-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--desctop {
+      height: 100%;
+      align-items: flex-start;
+      gap: 48px;
+    }
+  }
+  &__title {
+    @include inter-font(500, var(--main-text-color));
+    text-align: center;
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 48px;
+    @include tablet {
+      margin-bottom: 72px;
+      font-size: 54px;
+      line-height: 100%;
+    }
+  }
+  &__img {
+    margin-bottom: 32px;
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 12px;
+    font-size: 20px;
+    @include inter-font(500, var(--main-text-color));
+    letter-spacing: -0.4px;
+    @include tablet {
+      font-size: 40px;
+      line-height: 100%;
+      letter-spacing: -0.8px;
+    }
+    &--desktop {
+      cursor: pointer;
+      color: var(--main-text-color-transparent);
+      &:hover {
+        color: var(--main-text-color);
+      }
+      &:focus {
+        color: var(--main-text-color);
+      }
+      &:active {
+        color: var(--main-text-color);
+      }
+    }
+    &--desktop-active {
+      color: var(--main-text-color);
+    }
+  }
+  // &__subtitle--desktop {
+  //   color: var(--main-text-color-transparent);
+  // }
+  &__text {
+    margin-bottom: 24px;
+    font-size: 14px;
+    @include inter-font(300, var(--sec-text-color));
+    line-height: 140%;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}

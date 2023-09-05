@@ -1,0 +1,50 @@
+.hero {
+  position: relative;
+  height: 641px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 44px 48px;
+  gap: 24px;
+  background-image: url('../images/heroMobileImage.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include container(24px 14px 32px 24px, transparent);
+  @include tablet {
+    background-image: url('../images/hero-tablet.jpg');
+    grid-template-columns: 528px 1fr;
+    grid-template-rows: 1fr 48px;
+    gap: 0px;
+    height: 1109px;
+    @include container(48px 48px 48px 48px, transparent);
+  }
+  @include desktop {
+    height: 720px;
+  }
+
+  &__text {
+    font-size: 32px;
+    @include inter-font(500, var(--white-text-color));
+    line-height: 110%;
+    letter-spacing: -0.64px;
+    @include tablet {
+      font-size: 72px;
+      letter-spacing: -1.44px;
+      grid-column: span 2;
+    }
+  }
+  &__title {
+    font-size: 16px;
+    @include inter-font(500, var(--white-text-color));
+    line-height: 140%;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__button-wrapper {
+    @include tablet {
+      display: flex;
+      justify-content: end;
+    }
+  }
+}

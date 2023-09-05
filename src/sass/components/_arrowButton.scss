@@ -1,0 +1,19 @@
+.arrow-batton {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--pure-white);
+  }
+}

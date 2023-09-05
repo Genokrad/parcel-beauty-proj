@@ -1,0 +1,55 @@
+.button {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  max-width: 159px;
+  align-items: center;
+  background-color: var(--accent-color);
+  padding: 12px 16px 12px 16px;
+  border-radius: 44px;
+  transition: 0.3s;
+  cursor: pointer;
+  @include inter-font(500, var(--white-text-color));
+  &:hover {
+    background-color: var(--hover-red-color);
+  }
+  &:focus {
+    background-color: var(--hover-red-color);
+  }
+  &:active {
+    background-color: var(--pressed-red-color);
+  }
+  // --hover-red-color: #c82828;
+  // --pressed-red-color: #b41414;
+  &__icone {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+  &--direction {
+    color: var(--main-text-color);
+    border: 2px solid var(--accent-color);
+    background-color: var(--bcg-color);
+    font-size: 14px;
+    line-height: 120%;
+    width: 164px;
+    padding: 8px 24px;
+    gap: 10px;
+    &:hover {
+      border: 2px solid var(--hover-red-color);
+      background-color: var(--bcg-color);
+    }
+    &:active {
+      border: 2px solid var(--pressed-red-color);
+      background-color: var(--bcg-color);
+    }
+    // --hover-red-color: #c82828;
+    // --pressed-red-color: #b41414;
+  }
+  // &--direction {
+  //   // width: 140px;
+  // }
+  &--form {
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+}
