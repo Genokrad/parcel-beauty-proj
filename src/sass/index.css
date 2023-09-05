@@ -130,11 +130,6 @@ html {
   font-weight: 800;
   src: url("../fonts/inter-extrabold.ttf") format("truetype");
 }
-@font-face {
-  font-family: "Inter";
-  font-weight: 900;
-  src: url("../fonts/inter-black.ttf") format("truetype");
-}
 :root {
   --accent-color: #dc3c3c;
   --bcg-color: #f9f8f4;
