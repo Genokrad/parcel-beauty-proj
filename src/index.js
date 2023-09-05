@@ -1,4 +1,5 @@
 import imagePlastic from './images/direction/cosmetology.png';
+import sprite from './images/sprite.svg';
 
 const element = selector => document.querySelector(selector);
 const directions = element('.directions__desktop-wrapper');
@@ -140,8 +141,8 @@ function renderAdditionalContent() {
           виразного погляду та гармонійних рис
         </p>
         <button class="button button--direction">
-          Детальніше<svg class="button__icone">
-            <use xlink:href="./images/sprite.svg#arrowRight"></use>
+          Детальніше<svg viewBox="0 0 32 32 xmlns="http://www.w3.org/2000/svg  class="button__icone">
+            <use xlink:href="${sprite}#arrowRight"></use>
           </svg>
         </button>
       </div>
