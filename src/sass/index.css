@@ -142,6 +142,7 @@ html {
   --thre-bcg-color: #34384566;
   --male-bcg: #a5a5bc;
   --female-bcg: #c8b6c7;
+  --price-bcg-hover: #f1f1ed;
   --main-text-color: #1e1e2b;
   --sec-text-color: #292b38;
   --white-text-color: #f9f8f4;
@@ -1109,7 +1110,7 @@ html {
 .price__list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   margin-bottom: 48px;
 }
 @media screen and (min-width: 1440px) {
@@ -1121,6 +1122,20 @@ html {
 .price__item {
   display: flex;
   justify-content: space-between;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.price__item:hover {
+  background-color: var(--price-bcg-hover);
+}
+.price__item:hover .price__price {
+  transform: translateX(-30px);
+}
+.price__item:hover .price__svg {
+  opacity: 1;
+  transform: translateX(16px);
 }
 .price__description {
   font-weight: 500;
@@ -1134,17 +1149,32 @@ html {
     font-size: 20px;
   }
 }
+.price__wrapper {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
 .price__price {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: var(--sec-text-color);
   font-size: 16px;
   line-height: 140%;
+  transform: translateX(0);
+  transition: 0.5s;
 }
 @media screen and (min-width: 834px) {
   .price__price {
     font-size: 24px;
   }
+}
+.price__svg {
+  opacity: 0;
+  right: 16px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
 }
 .price__button-wrapper {
   display: flex;

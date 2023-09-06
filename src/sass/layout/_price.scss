@@ -36,7 +36,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
     margin-bottom: 48px;
     @include desktop {
       gap: 36px;
@@ -46,6 +46,22 @@
   &__item {
     display: flex;
     justify-content: space-between;
+    // background-color: var(--price-bcg-hover);
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--price-bcg-hover);
+
+      .price__price {
+        transform: translateX(-30px);
+      }
+      .price__svg {
+        opacity: 1;
+        transform: translateX(16px);
+      }
+    }
   }
   &__description {
     @include inter-font(500, var(--sec-text-color));
@@ -55,13 +71,29 @@
       font-size: 20px;
     }
   }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
   &__price {
     @include inter-font(500, var(--sec-text-color));
     font-size: 16px;
     line-height: 140%;
+
     @include tablet {
       font-size: 24px;
     }
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  &__svg {
+    opacity: 0;
+    right: 16px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
   }
   &__button-wrapper {
     display: flex;
