@@ -36,7 +36,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    // gap: 16px;
     margin-bottom: 48px;
     @include desktop {
       gap: 36px;
@@ -47,19 +47,21 @@
     display: flex;
     justify-content: space-between;
     // background-color: var(--price-bcg-hover);
-    padding: 8px 16px;
-    border-radius: 12px;
+    padding: 16px 16px;
+    border-radius: 16px;
     transition: 0.3s;
     cursor: pointer;
     &:hover {
       background-color: var(--price-bcg-hover);
 
       .price__price {
-        transform: translateX(-30px);
+        transform: translateX(-36px);
       }
       .price__svg {
         opacity: 1;
-        transform: translateX(16px);
+        transform: translate(16px, -50%);
+
+        // transform: translateY(-50%);
       }
     }
   }
@@ -74,7 +76,7 @@
   &__wrapper {
     position: relative;
     display: flex;
-    gap: 8px;
+    gap: 16px;
   }
   &__price {
     @include inter-font(500, var(--sec-text-color));
@@ -90,6 +92,8 @@
   &__svg {
     opacity: 0;
     right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     width: 24px;
     height: 24px;
@@ -99,10 +103,17 @@
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
+
     @include desktop {
       margin-bottom: 72px;
     }
   }
+  &__attention-wrapper {
+    &--margin-top {
+      margin-top: 48px;
+    }
+  }
+
   &__attention {
     padding: 16px;
     background-color: var(--pure-white);

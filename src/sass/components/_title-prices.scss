@@ -1,0 +1,7 @@
+.title-prices {
+  @include inter-font(500, var(--main-text-color));
+  text-align: center;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 64px;
+}

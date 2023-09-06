@@ -1,7 +1,7 @@
 .form {
-  @include container(96px 24px 96px 24px, var(--bcg-color));
+  @include container(96px 24px 96px 24px, var(--form-bcg-color));
   @include tablet {
-    @include container(120px 15px 120px 15px, var(--bcg-color));
+    @include container(120px 15px 120px 15px, var(--form-bcg-color));
   }
 
   &__title {
