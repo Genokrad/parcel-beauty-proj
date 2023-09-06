@@ -34,8 +34,8 @@
   src: url('../fonts/inter-extrabold.ttf') format('truetype');
 }
 
-// @font-face {
-//   font-family: 'Inter';
-//   font-weight: 900; // Black
-//   src: url('../fonts/inter-black.ttf') format('truetype');
-// }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400; // Regular
+  src: url('../fonts/roboto-regular.ttf') format('truetype');
+}

@@ -1,6 +1,12 @@
 @mixin inter-font($weight, $color: var(--main-text-color)) {
   font-weight: $weight;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: $color;
+}
+
+@mixin roboto-font($weight, $color: var(--main-text-color)) {
+  font-weight: $weight;
+  font-family: 'Roboto', sans-serif;
   color: $color;
 }
 
