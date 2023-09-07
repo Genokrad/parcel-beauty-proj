@@ -15,7 +15,12 @@
   @include tablet {
     padding: 14px 24px;
   }
-
+  &--contacts {
+    color: var(--main-text-colo);
+    flex: 1;
+    width: 169px;
+    font-size: 18px;
+  }
   &:hover {
     background-color: var(--hover-red-color);
   }

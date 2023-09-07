@@ -1,0 +1,47 @@
+.adress {
+  @include desktop {
+    width: 233px;
+  }
+  &__text {
+    @include inter-font(300, var(--white-text-color));
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 8px;
+    &--contacts {
+      @include inter-font(400, var(--main-text-color));
+      font-size: 20px;
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+  }
+  &__link {
+    @include inter-font(500, var(--red-text-color));
+    font-size: 14px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &--contacts {
+      font-size: 18px;
+    }
+    &:hover {
+      color: var(--hover-red-color);
+    }
+    &:focus {
+      color: var(--hover-red-color);
+    }
+    &:active {
+      color: var(--pressed-red-color);
+    }
+  }
+  &__link-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    &--contacts {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

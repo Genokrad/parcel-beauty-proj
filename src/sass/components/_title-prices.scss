@@ -9,4 +9,10 @@
     font-size: 54px;
     letter-spacing: -1.08px;
   }
+  &--contacts {
+    margin-bottom: 72px;
+    @include tablet {
+      margin-bottom: 109px;
+    }
+  }
 }

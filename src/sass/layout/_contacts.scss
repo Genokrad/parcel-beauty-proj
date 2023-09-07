@@ -1,0 +1,29 @@
+.contacts {
+  @include container(32px 24px 72px 24px, var(--bcg-color));
+
+  @include tablet {
+    @include container(64px 48px 60px 48px, var(--bcg-color));
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+
+    @include tablet {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 338px 246px;
+      justify-content: space-between;
+      margin-bottom: 120px;
+    }
+    @include desktop {
+      width: 908px;
+      margin: 0 auto;
+      margin-bottom: 120px;
+    }
+  }
+  @include tablet {
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+  }
+}

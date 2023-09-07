@@ -6,6 +6,9 @@
     display: flex;
     gap: 32px;
   }
+  @include tablet {
+    justify-content: flex-end;
+  }
 
   &__icon {
     width: 32px;

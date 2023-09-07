@@ -4,59 +4,60 @@
     @include container(36px 24px 36px 24px, var(--sec-bcg-color));
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 44px;
   }
   @include desktop {
-    @include container(36px 72px 36px 272px, var(--sec-bcg-color));
+    @include container(36px 72px 36px 72px, var(--sec-bcg-color));
   }
-  &__text {
-    @include inter-font(300, var(--white-text-color));
-    font-size: 16px;
-    line-height: 140%;
-    margin-bottom: 8px;
-  }
-  &__link {
-    @include inter-font(500, var(--red-text-color));
-    font-size: 14px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    &:hover {
-      color: var(--hover-red-color);
-    }
-    &:focus {
-      color: var(--hover-red-color);
-    }
-    &:active {
-      color: var(--pressed-red-color);
-    }
-  }
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 72px;
-    margin-top: 72px;
-    @include tablet {
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-  }
-  &__contacts-sub-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+  // &__text {
+  //   @include inter-font(300, var(--white-text-color));
+  //   font-size: 16px;
+  //   line-height: 140%;
+  //   margin-bottom: 8px;
+  // }
+  // &__link {
+  //   @include inter-font(500, var(--red-text-color));
+  //   font-size: 14px;
+  //   line-height: 120%;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 10px;
+  //   &:hover {
+  //     color: var(--hover-red-color);
+  //   }
+  //   &:focus {
+  //     color: var(--hover-red-color);
+  //   }
+  //   &:active {
+  //     color: var(--pressed-red-color);
+  //   }
+  // }
+  // &__contacts {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 24px;
+  //   margin-bottom: 72px;
+  //   margin-top: 72px;
+  //   @include tablet {
+  //     margin-bottom: 0;
+  //     margin-top: 0;
+  //   }
+  // }
+  // &__contacts-sub-wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 
-  &__tel {
-    @include inter-font(300, var(--white-text-color));
-    font-size: 16px;
-    line-height: 140%;
-  }
-  &__mail {
-    @include inter-font(300, var(--white-text-color));
-    font-size: 16px;
-    line-height: 140%;
-  }
+  // &__tel {
+  //   @include inter-font(300, var(--white-text-color));
+  //   font-size: 16px;
+  //   line-height: 140%;
+  // }
+  // &__mail {
+  //   @include inter-font(300, var(--white-text-color));
+  //   font-size: 16px;
+  //   line-height: 140%;
+  // }
   &__about {
     @include inter-font(300, var(--white-text-color));
     text-align: center;
@@ -72,16 +73,16 @@
       text-align: end;
     }
   }
-  &__link-icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-  }
-  &__town {
-    @include desktop {
-      width: 233px;
-    }
-  }
+  // &__link-icon {
+  //   width: 16px;
+  //   height: 16px;
+  //   fill: currentColor;
+  // }
+  // &__town {
+  //   @include desktop {
+  //     width: 233px;
+  //   }
+  // }
 }
 
 // --red-text-color

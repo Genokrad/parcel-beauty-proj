@@ -23,6 +23,8 @@
 @import './components/letterButton';
 @import './components/title-prices';
 @import './components/accordion';
+@import './components/adress';
+@import './components/tel-and-mail';
 
 //LAYOUT
 @import './layout/header';
@@ -39,3 +41,5 @@
 @import './layout/main-price';
 @import './layout/procedure';
 @import './layout/questions';
+@import './layout/contacts';
+@import './layout/map';

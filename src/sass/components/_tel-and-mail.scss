@@ -1,0 +1,46 @@
+.tel-and-mail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 72px;
+  margin-top: 72px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &--contacts {
+    margin-top: 120px;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__contacts-sub-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__tel {
+    @include inter-font(300, var(--white-text-color));
+    font-size: 16px;
+    line-height: 140%;
+    &--contacts {
+      font-size: 20px;
+      @include inter-font(400, var(--main-text-color));
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+  }
+  &__mail {
+    @include inter-font(300, var(--white-text-color));
+    font-size: 16px;
+    line-height: 140%;
+    &--contacts {
+      @include inter-font(400, var(--main-text-color));
+      font-size: 20px;
+      @include tablet {
+        font-size: 24px;
+      }
+    }
+  }
+}
