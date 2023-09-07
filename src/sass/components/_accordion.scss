@@ -9,6 +9,7 @@
     grid-template-columns: 1fr 32px;
     grid-template-rows: auto auto;
     row-gap: 29px;
+    column-gap: 16px;
     @include tablet {
       grid-template-columns: 1fr 56px;
       align-items: center;
@@ -68,6 +69,9 @@
     justify-content: space-between;
     @include tablet {
       font-size: 20px;
+    }
+    &--question {
+      font-size: 18px;
     }
   }
 }
