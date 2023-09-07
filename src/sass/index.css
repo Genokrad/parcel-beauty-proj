@@ -1831,8 +1831,25 @@ html {
 }
 
 .map {
+  height: 454px;
+  background-image: url("../images/map.jpg");
   width: 100%;
   margin: 0 auto;
   padding: 60px 0 0 0;
   background-color: var(--bcg-color);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.map__img {
+  display: none;
+}
+@media screen and (min-width: 834px) {
+  .map {
+    height: auto;
+    background-image: none;
+  }
+  .map__img {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */

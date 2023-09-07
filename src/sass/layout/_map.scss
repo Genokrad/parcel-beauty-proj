@@ -1,3 +1,18 @@
 .map {
+  height: 454px;
+  background-image: url('../images/map.jpg');
   @include container(60px 0 0 0, var(--bcg-color));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__img {
+    display: none;
+  }
+  @include tablet {
+    &__img {
+      display: block;
+    }
+    height: auto;
+    background-image: none;
+  }
 }
