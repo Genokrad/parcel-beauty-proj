@@ -1,0 +1,48 @@
+.doctor-personal {
+  @include container(16px 16px 48px 16px, var(--bcg-color));
+  @include tablet {
+    @include container(26px 24px 72px 24px, var(--bcg-color));
+  }
+  @include desktop {
+    @include container(67px 120px 72px 120px, var(--bcg-color));
+  }
+
+  &__img-wrapper {
+    background-color: var(--male-bcg-color);
+    background-image: url('../images/doctors/persolnal-page/gumeniy.png');
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 14.2px;
+    margin-bottom: 48px;
+    height: 338px;
+    @include tablet {
+      margin-bottom: 72px;
+      border-radius: 26.2px;
+      height: 440px;
+    }
+    @include desktop {
+      border-radius: 40px;
+      height: 672px;
+    }
+  }
+  &__description {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @include tablet {
+      margin-bottom: 72px;
+    }
+    @include desktop {
+      max-width: 904px;
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    @include inter-font(400, var(--personal-text));
+    font-size: 18px;
+    line-height: 160%;
+  }
+}

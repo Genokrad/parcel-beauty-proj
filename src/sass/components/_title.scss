@@ -1,0 +1,21 @@
+.title {
+  @include inter-font(500, var(--main-text-color));
+  text-align: start;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 12px;
+  &--sertification {
+    text-align: center;
+  }
+
+  @include tablet {
+    margin-bottom: 24px;
+    font-size: 54px;
+    letter-spacing: -1.08px;
+  }
+  @include desktop {
+    max-width: 904px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}

@@ -1,4 +1,7 @@
 .accordion {
+  &--doctor {
+    padding: 0 8px;
+  }
   @include desktop {
     max-width: 904px;
     min-width: 904px;
@@ -23,6 +26,9 @@
     @include tablet {
       letter-spacing: -0.64px;
       font-size: 32px;
+    }
+    &--doctor {
+      font-size: 20px;
     }
   }
   &__checkbox-wrapper {
@@ -60,6 +66,20 @@
     @include tablet {
       gap: 39px;
     }
+    &--doctor {
+      gap: 18px;
+      @include tablet {
+        gap: 24px;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    &--doctor ::before {
+      content: '\2022';
+      color: var(--sec-text-color);
+      margin-right: 8px;
+    }
   }
   &__item-text {
     @include inter-font(500, var(--sec-text-color));
@@ -72,6 +92,11 @@
     }
     &--question {
       font-size: 18px;
+    }
+    &--doctor {
+      @include inter-font(400, var(--sec-text-color));
+      font-size: 14px;
+      line-height: 160%;
     }
   }
 }

@@ -144,12 +144,15 @@ html {
   --female-bcg: #c8b6c7;
   --price-bcg-hover: #f1f1ed;
   --form-bcg-color: #edece9;
+  --male-bcg-color: #a5a5bc;
   --main-text-color: #1e1e2b;
   --sec-text-color: #292b38;
   --white-text-color: #f9f8f4;
   --red-text-color: #dc3c3c;
   --pure-white: #fff;
   --linguage-text: #989ca9;
+  --subtitle-text: #86898f;
+  --personal-text: #3a3f4b;
   --main-text-color-transparent: #1e1e2b5d;
   --link-active-color: rgba(249, 248, 244, 0.2);
   --black-gradient: to left, rgba(255, 255, 255, 0.201), #1e1e2bc5;
@@ -400,6 +403,9 @@ html {
   }
 }
 
+.accordion--doctor {
+  padding: 0 8px;
+}
 @media screen and (min-width: 1440px) {
   .accordion {
     max-width: 904px;
@@ -434,6 +440,9 @@ html {
     letter-spacing: -0.64px;
     font-size: 32px;
   }
+}
+.accordion__text--doctor {
+  font-size: 20px;
 }
 .accordion__checkbox-wrapper {
   position: relative;
@@ -475,6 +484,22 @@ html {
     gap: 39px;
   }
 }
+.accordion__list--doctor {
+  gap: 18px;
+}
+@media screen and (min-width: 834px) {
+  .accordion__list--doctor {
+    gap: 24px;
+  }
+}
+.accordion__item {
+  display: flex;
+}
+.accordion__item--doctor ::before {
+  content: "•";
+  color: var(--sec-text-color);
+  margin-right: 8px;
+}
 .accordion__item-text {
   font-weight: 500;
   font-family: "Inter", sans-serif;
@@ -491,6 +516,13 @@ html {
 }
 .accordion__item-text--question {
   font-size: 18px;
+}
+.accordion__item-text--doctor {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: var(--sec-text-color);
+  font-size: 14px;
+  line-height: 160%;
 }
 
 @media screen and (min-width: 1440px) {
@@ -608,6 +640,55 @@ html {
 @media screen and (min-width: 834px) {
   .tel-and-mail__mail--contacts {
     font-size: 24px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--main-text-color);
+  text-align: start;
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 12px;
+}
+.title--sertification {
+  text-align: center;
+}
+@media screen and (min-width: 834px) {
+  .title {
+    margin-bottom: 24px;
+    font-size: 54px;
+    letter-spacing: -1.08px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    max-width: 904px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}
+
+.subtitle {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  color: var(--subtitle-text);
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+@media screen and (min-width: 834px) {
+  .subtitle {
+    margin-bottom: 48px;
+    letter-spacing: -0.48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .subtitle {
+    max-width: 904px;
+    margin: 0 auto;
+    margin-bottom: 48px;
   }
 }
 
@@ -1851,5 +1932,99 @@ html {
   }
   .map__img {
     display: block;
+  }
+}
+
+.doctor-personal {
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 16px 48px 16px;
+  background-color: var(--bcg-color);
+}
+@media screen and (min-width: 834px) {
+  .doctor-personal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 26px 24px 72px 24px;
+    background-color: var(--bcg-color);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .doctor-personal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 67px 120px 72px 120px;
+    background-color: var(--bcg-color);
+  }
+}
+.doctor-personal__img-wrapper {
+  background-color: var(--male-bcg-color);
+  background-image: url("../images/doctors/persolnal-page/gumeniy.png");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 14.2px;
+  margin-bottom: 48px;
+  height: 338px;
+}
+@media screen and (min-width: 834px) {
+  .doctor-personal__img-wrapper {
+    margin-bottom: 72px;
+    border-radius: 26.2px;
+    height: 440px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .doctor-personal__img-wrapper {
+    border-radius: 40px;
+    height: 672px;
+  }
+}
+.doctor-personal__description {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 834px) {
+  .doctor-personal__description {
+    margin-bottom: 72px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .doctor-personal__description {
+    max-width: 904px;
+    margin: 0 auto;
+  }
+}
+.doctor-personal__text {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  color: var(--personal-text);
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.diplomas {
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px 96px 24px;
+  background-color: var(--bcg-color);
+}
+@media screen and (min-width: 834px) {
+  .diplomas {
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 17px 144px 17px;
+    background-color: var(--bcg-color);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .diplomas {
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 156px 144px 156px;
+    background-color: var(--bcg-color);
   }
 }/*# sourceMappingURL=index.css.map */

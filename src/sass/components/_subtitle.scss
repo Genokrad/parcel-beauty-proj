@@ -1,0 +1,15 @@
+.subtitle {
+  @include inter-font(500, var(--subtitle-text));
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+  @include tablet {
+    margin-bottom: 48px;
+    letter-spacing: -0.48px;
+  }
+  @include desktop {
+    max-width: 904px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+}

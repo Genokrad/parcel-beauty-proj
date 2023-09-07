@@ -1,0 +1,9 @@
+.diplomas {
+  @include container(48px 24px 96px 24px, var(--bcg-color));
+  @include tablet {
+    @include container(72px 17px 144px 17px, var(--bcg-color));
+  }
+  @include desktop {
+    @include container(72px 156px 144px 156px, var(--bcg-color));
+  }
+}

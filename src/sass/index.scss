@@ -25,6 +25,8 @@
 @import './components/accordion';
 @import './components/adress';
 @import './components/tel-and-mail';
+@import './components/title';
+@import './components/subtitle';
 
 //LAYOUT
 @import './layout/header';
@@ -43,3 +45,5 @@
 @import './layout/questions';
 @import './layout/contacts';
 @import './layout/map';
+@import './layout/doctor-personal-page';
+@import './layout/diplomas';
