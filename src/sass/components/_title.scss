@@ -6,16 +6,19 @@
   margin-bottom: 12px;
   &--sertification {
     text-align: center;
+    margin-bottom: 64px;
   }
 
   @include tablet {
     margin-bottom: 24px;
     font-size: 54px;
     letter-spacing: -1.08px;
+    margin-bottom: 72px;
   }
   @include desktop {
     max-width: 904px;
     margin: 0 auto;
     margin-bottom: 24px;
+    margin-bottom: 72px;
   }
 }
