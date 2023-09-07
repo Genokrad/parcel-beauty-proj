@@ -5,6 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  @include desktop {
+    @include container(36px 72px 36px 272px, var(--sec-bcg-color));
+  }
   &__text {
     @include inter-font(300, var(--white-text-color));
     font-size: 16px;

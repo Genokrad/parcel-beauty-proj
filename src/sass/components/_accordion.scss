@@ -1,22 +1,35 @@
 .accordion {
+  @include desktop {
+    max-width: 904px;
+    min-width: 904px;
+    margin: 0 auto;
+  }
   &__string-wrapper {
     display: grid;
     grid-template-columns: 1fr 32px;
     grid-template-rows: auto auto;
     row-gap: 29px;
+    @include tablet {
+      grid-template-columns: 1fr 56px;
+      align-items: center;
+    }
   }
   &__text {
     @include inter-font(500, var(--main-text-color));
     font-size: 24px;
     line-height: 120%;
     letter-spacing: -0.48px;
+    @include tablet {
+      letter-spacing: -0.64px;
+      font-size: 32px;
+    }
   }
   &__checkbox-wrapper {
     position: relative;
   }
   &__checkbox {
     position: absolute;
-    opacity: 0.1;
+    opacity: 0;
     cursor: pointer;
   }
   &__label {
@@ -28,6 +41,10 @@
     height: 32px;
     align-items: center;
     justify-content: center;
+    @include tablet {
+      width: 56px;
+      height: 56px;
+    }
   }
   &__svg {
     width: 24px;
@@ -39,6 +56,9 @@
     gap: 33px;
     display: none;
     padding-bottom: 28px;
+    @include tablet {
+      gap: 39px;
+    }
   }
   &__item-text {
     @include inter-font(500, var(--sec-text-color));
@@ -46,5 +66,8 @@
     line-height: 140%;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
