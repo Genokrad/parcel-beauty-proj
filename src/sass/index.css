@@ -500,10 +500,14 @@ html {
   color: var(--sec-text-color);
   margin-right: 8px;
 }
+.accordion__item-link {
+  width: 100%;
+}
 .accordion__item-text {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: var(--sec-text-color);
+  width: 100%;
   font-size: 14px;
   line-height: 140%;
   display: flex;
