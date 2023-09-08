@@ -43,10 +43,12 @@
       margin-bottom: 72px;
     }
   }
+  // &__item-link {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   width: 100%;
+  // }
   &__item {
-    display: flex;
-    justify-content: space-between;
-    // background-color: var(--price-bcg-hover);
     padding: 16px 16px;
     border-radius: 16px;
     transition: 0.3s;
@@ -155,4 +157,10 @@
       font-size: 14px;
     }
   }
+}
+
+a.price__item-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

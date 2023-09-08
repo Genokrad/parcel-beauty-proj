@@ -1464,8 +1464,6 @@ html {
   }
 }
 .price__item {
-  display: flex;
-  justify-content: space-between;
   padding: 16px 16px;
   border-radius: 16px;
   transition: 0.3s;
@@ -1583,6 +1581,12 @@ html {
   .price__attention-anotation {
     font-size: 14px;
   }
+}
+
+a.price__item-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .about-clinic {
