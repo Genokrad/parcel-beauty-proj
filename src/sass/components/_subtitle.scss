@@ -3,6 +3,7 @@
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.4px;
+
   @include tablet {
     margin-bottom: 48px;
     letter-spacing: -0.48px;
@@ -11,5 +12,24 @@
     max-width: 904px;
     margin: 0 auto;
     margin-bottom: 48px;
+  }
+  &--operation {
+    @include inter-font(500, var(--sec-bcg-color));
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+  }
+  &--about-price {
+    text-align: center;
+    @include inter-font(500, var(--main-text-color));
+    margin-bottom: 12px;
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 24px;
+      letter-spacing: -0.64px;
+    }
   }
 }

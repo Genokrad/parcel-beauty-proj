@@ -21,4 +21,14 @@
     margin-bottom: 24px;
     margin-bottom: 72px;
   }
+  &--operation {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+  &--about-price {
+    text-align: center;
+    @include tablet {
+      line-height: 100%;
+    }
+  }
 }

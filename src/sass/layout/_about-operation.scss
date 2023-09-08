@@ -1,0 +1,56 @@
+.about-operation {
+  @include container(64px 24px 32px 24px, var(--bcg-color));
+  @include tablet {
+    @include container(64px 24px 60px 24px, var(--bcg-color));
+  }
+  @include desktop {
+    @include container(64px 120px 60px 120px, var(--bcg-color));
+  }
+
+  &__img {
+    margin-bottom: 64px;
+    @include tablet {
+      margin-bottom: 72px;
+    }
+    @include desktop {
+      margin-bottom: 120px;
+    }
+  }
+  &__description {
+    padding: 0 24px;
+    @include desktop {
+      max-width: 906px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin-bottom: 64px;
+    @include tablet {
+      margin-bottom: 120px;
+    }
+  }
+  &__paragraph {
+    @include inter-font(400, var(--sec-text-color));
+  }
+  &__img-wrapper {
+    max-width: 312px;
+    height: 176px;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 100%;
+      width: 640px;
+      height: 360px;
+    }
+    @include desktop {
+      width: 960px;
+      height: 540px;
+      border-radius: 24px;
+    }
+  }
+}
