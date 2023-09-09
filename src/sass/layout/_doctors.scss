@@ -11,6 +11,17 @@
     grid-template-columns: 1fr 67.9%;
     gap: 48px;
   }
+  &--procedure {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    @include tablet {
+      @include container(56px 81px 120px 81px, var(--bcg-color));
+    }
+    @include desktop {
+      @include container(56px 296px 120px 296px, var(--bcg-color));
+      gap: 0;
+    }
+  }
 
   &__text-wrapper {
     width: 280px;
@@ -23,6 +34,9 @@
       flex-direction: column;
       justify-content: center;
     }
+    &--doctors {
+      width: 100%;
+    }
   }
   &__title {
     margin-bottom: 24px;
@@ -33,6 +47,14 @@
     @include desktop {
       font-size: 54px;
       letter-spacing: -2.16px;
+    }
+    &--doctors {
+      text-align: center;
+      width: 100%;
+      @include tablet {
+        font-size: 54px;
+        letter-spacing: -1.08px;
+      }
     }
   }
 
