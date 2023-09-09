@@ -1,6 +1,78 @@
 <section class="directions container">
   <h2 class="directions__title">Основні напрями</h2>
-  <div class="directions__desktop-wrapper"></div>
+
+  <div class="directions__desktop-wrapper">
+    <div class="directions__card">
+      <img
+        class="directions__img"
+        src="./images/direction/cosmetology.png"
+        alt="women"
+      />
+    </div>
+    <div class="directions__card-information">
+      <ul class="directions__action-title directions__action-title--desctop">
+        <li class="directions__item-desctop">
+          <!-- directions__item-desctop--active -->
+          <p class="directions__subtitle directions__subtitle--desktop">
+            <!-- directions__subtitle--desktop-active -->
+            Пластична хірургія
+          </p>
+          <div
+            class="directions__data visually-hidden"
+            id="directions__data-plastick"
+          >
+            <p class="directions__text">
+              Пластика грудей, обличчя, тіла - все для ваших ідеальних ліній,
+              виразного погляду та гармонійних рис
+            </p>
+            <button class="button button--direction">
+              Детальніше<svg class="button__icone">
+                <use xlink:href="./images/sprite.svg#arrowRight"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="directions__item-desctop">
+          <p class="directions__subtitle directions__subtitle--desktop">
+            Eстетична гінекологія
+          </p>
+          <div
+            class="directions__data visually-hidden"
+            id="directions__data-ginecology"
+          >
+            <p class="directions__text">
+              Усі види інтимної пластики, ліпофілінгу, ліпосакції, а також
+              косметологічного догляду інтимної зони
+            </p>
+            <button class="button button--direction">
+              Детальніше<svg class="button__icone">
+                <use xlink:href="./images/sprite.svg#arrowRight"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="directions__item-desctop">
+          <p class="directions__subtitle directions__subtitle--desktop">
+            Косметологія
+          </p>
+          <div
+            class="directions__data visually-hidden"
+            id="directions__data-cosmetology"
+          >
+            <p class="directions__text">
+              Сучасні лазери, SMAS-ліфтинг, контурна пластика та доглядові
+              процедури для вашого неперевершеного виигляду
+            </p>
+            <button class="button button--direction">
+              Детальніше<svg class="button__icone">
+                <use xlink:href="./images/sprite.svg#arrowRight"></use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="directions__wrapper">
     <div class="directions__card">
       <img
@@ -22,11 +94,13 @@
       </div>
     </div>
     <div class="directions__card">
-      <img
-        class="directions__img"
-        src="./images/direction/estetic.png"
-        alt="women"
-      />
+      <div class="directions__image-container">
+        <img
+          class="directions__img"
+          src="./images/direction/estetic.png"
+          alt="women"
+        />
+      </div>
       <div class="directions__card-information">
         <h3 class="directions__subtitle">Eстетична гінекологія</h3>
         <p class="directions__text">
