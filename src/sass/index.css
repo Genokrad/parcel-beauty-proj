@@ -817,14 +817,14 @@ html {
   gap: 56px;
   width: 100%;
   margin: 0 auto;
-  padding: 136px 32px 92px 32px;
+  padding: 136px 16px 92px 16px;
   background-color: var(--sec-bcg-color);
 }
 @media screen and (min-width: 1440px) {
   .header-modal {
     width: 100%;
     margin: 0 auto;
-    padding: 0 0 0 0;
+    padding: 0 32px 0 32px;
     background-color: var(--sec-bcg-color);
     height: auto;
   }
@@ -939,13 +939,13 @@ html {
   grid-template-columns: 72px 1fr 24px;
   gap: 12px;
   align-items: center;
-  padding: 8px 24px 8px 8px;
 }
 @media screen and (min-width: 1440px) {
   .header-modal__doctor-item {
     grid-template-columns: 120px 1fr 24px;
     gap: 0;
     border-radius: 22px;
+    padding: 8px 24px 8px 8px;
   }
   .header-modal__doctor-item:hover {
     background-color: rgba(134, 137, 143, 0.2);

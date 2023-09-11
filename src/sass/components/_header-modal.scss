@@ -9,9 +9,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 56px;
-  @include container(136px 32px 92px 32px, var(--sec-bcg-color));
+  @include container(136px 16px 92px 16px, var(--sec-bcg-color));
   @include desktop {
-    @include container(0 0 0 0, var(--sec-bcg-color));
+    @include container(0 32px 0 32px, var(--sec-bcg-color));
     height: auto;
   }
 
@@ -124,11 +124,12 @@
     // grid-template-rows: 72px;
     gap: 12px;
     align-items: center;
-    padding: 8px 24px 8px 8px;
+
     @include desktop {
       grid-template-columns: 120px 1fr 24px;
       gap: 0;
       border-radius: 22px;
+      padding: 8px 24px 8px 8px;
       &:hover {
         background-color: rgba(134, 137, 143, 0.2);
       }
