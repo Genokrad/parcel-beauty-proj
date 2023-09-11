@@ -63,5 +63,14 @@
     border-radius: 12px;
     padding: 16px;
     border: none;
+    &:hover {
+      outline: 2px solid rgba(58, 63, 75, 0.24);
+    }
+    &:focus {
+      outline: 2px solid rgba(58, 63, 75, 0.24);
+    }
+    &:active {
+      outline: 2px solid var(--4, #3a3f4b);
+    }
   }
 }
