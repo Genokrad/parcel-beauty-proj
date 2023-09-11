@@ -8,16 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  &__middle {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 4;
-    @include container(0 0 0 0, var(--sec-bcg-color));
-    height: auto;
-  }
-
-  @include container(136px 32px 24px 32px, var(--sec-bcg-color));
+  gap: 56px;
+  @include container(136px 32px 92px 32px, var(--sec-bcg-color));
   @include desktop {
     @include container(0 0 0 0, var(--sec-bcg-color));
     height: auto;

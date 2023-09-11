@@ -8,7 +8,7 @@ const isModalHidden = selector => {
   return modal.classList.contains('visually-hidden');
 };
 
-let latButton = '';
+// let latButton = '';
 
 const toggleModalDesktop = (mark, event) => {
   if (isModalHidden('.header-modal.container')) {
@@ -99,10 +99,18 @@ const toggleSvg = () => {
 
   if (currentHref === `${sprite}#hamburger`) {
     hamburgerIcon.setAttribute('xlink:href', `${sprite}#cross`);
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
   } else if (currentHref === `${sprite}#cross`) {
     hamburgerIcon.setAttribute('xlink:href', `${sprite}#hamburger`);
+    const top = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   } else {
     hamburgerIcon.setAttribute('xlink:href', `${sprite}#cross`);
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
   }
 };
 

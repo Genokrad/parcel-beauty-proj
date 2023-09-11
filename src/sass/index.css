@@ -814,21 +814,11 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 56px;
   width: 100%;
   margin: 0 auto;
-  padding: 136px 32px 24px 32px;
+  padding: 136px 32px 92px 32px;
   background-color: var(--sec-bcg-color);
-}
-.header-modal__middle {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 4;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0 0 0;
-  background-color: var(--sec-bcg-color);
-  height: auto;
 }
 @media screen and (min-width: 1440px) {
   .header-modal {
