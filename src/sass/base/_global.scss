@@ -33,3 +33,18 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  body.modal-open {
+    overflow: auto;
+  }
+}
+
+.header-modal {
+  overflow-y: auto;
+  max-height: 100vh; /* Максимальная высота модального окна */
+}

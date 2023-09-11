@@ -19,6 +19,20 @@
   overflow: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  body.modal-open {
+    overflow: auto;
+  }
+}
+.header-modal {
+  overflow-y: auto;
+  max-height: 100vh; /* Максимальная высота модального окна */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -793,14 +807,28 @@ html {
 
 .header-modal {
   position: absolute;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 136px 16px 20px 16px;
+  padding: 136px 32px 24px 32px;
   background-color: var(--sec-bcg-color);
-  display: flex;
-  justify-content: center;
+}
+.header-modal__middle {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  background-color: var(--sec-bcg-color);
+  height: auto;
 }
 @media screen and (min-width: 1440px) {
   .header-modal {
@@ -808,6 +836,7 @@ html {
     margin: 0 auto;
     padding: 0 0 0 0;
     background-color: var(--sec-bcg-color);
+    height: auto;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -996,6 +1025,25 @@ html {
   line-height: 140%;
 }
 
+.header-mobile__button-wrapper {
+  display: grid;
+  grid-template-columns: 72px 129px;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (min-width: 834px) {
+  .header-mobile__button-wrapper {
+    display: grid;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-mobile__button-wrapper {
+    display: none;
+  }
+}
+
 .header {
   background-color: var(--sec-bcg-color);
   display: flex;
@@ -1107,6 +1155,16 @@ html {
   grid-template-columns: 72px 129px;
   gap: 24px;
   align-items: center;
+}
+.header__button-wrapper--mobile {
+  display: grid;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .header__button-wrapper--mobile {
+    display: none;
+  }
 }
 @media screen and (min-width: 834px) {
   .header__button-wrapper {

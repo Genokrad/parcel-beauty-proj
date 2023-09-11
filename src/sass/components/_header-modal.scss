@@ -1,15 +1,28 @@
 .header-modal {
   position: absolute;
-  // width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   // height: 100%;
   z-index: 3;
-  @include container(136px 16px 20px 16px, var(--sec-bcg-color));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__middle {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 4;
+    @include container(0 0 0 0, var(--sec-bcg-color));
+    height: auto;
+  }
+
+  @include container(136px 32px 24px 32px, var(--sec-bcg-color));
   @include desktop {
     @include container(0 0 0 0, var(--sec-bcg-color));
+    height: auto;
   }
-  display: flex;
-  justify-content: center;
+
   @include desktop {
     min-height: auto;
   }
@@ -192,5 +205,21 @@
     @include inter-font(300, var(--white-text-color));
     font-size: 12px;
     line-height: 140%;
+  }
+}
+
+.header-mobile__button-wrapper {
+  display: grid;
+  grid-template-columns: 72px 129px;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include tablet {
+    display: grid;
+  }
+
+  @include desktop {
+    display: none;
   }
 }

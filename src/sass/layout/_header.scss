@@ -96,6 +96,14 @@
     grid-template-columns: 72px 129px;
     gap: 24px;
     align-items: center;
+    &--mobile {
+      display: grid;
+      justify-content: space-between;
+      width: 100%;
+      @include desktop {
+        display: none;
+      }
+    }
     @include tablet {
       display: grid;
     }
