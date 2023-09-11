@@ -2,88 +2,44 @@ const getEl = el => document.querySelector(el);
 
 import sprite from './images/sprite.svg';
 
-const isModalHidden = () => {
-  const modal = document.querySelector('.header-modal.container');
+const isModalHidden = selector => {
+  const modal = document.querySelector(selector);
   if (!modal) return false; // Если элемент не найден, считаем его видимым
   return modal.classList.contains('visually-hidden');
 };
 
 let latButton = '';
 
-const toggleModalDesktopService = (event, mark) => {
-  // console.dir(event.target.innerText === 'Лікарі');
-  if (latButton === '') {
+const toggleModalDesktop = (mark, event) => {
+  if (isModalHidden('.header-modal.container')) {
+    getEl('.header-modal').classList.toggle('visually-hidden');
+    console.log('1');
+  }
+
+  if (!isModalHidden('.header-modal__services-list--servicess')) {
+    getEl('.header-modal__services-list--servicess').classList.add(
+      'visually-hidden'
+    );
+    console.dir(event.target.innerText);
+    toggleChevron('.header-modal__icon-desktop-servicess use');
+    console.log('5');
+    return;
+  }
+
+  if (!isModalHidden('.header-modal__services-list--doctors')) {
+    getEl('.header-modal__services-list--doctors').classList.add(
+      'visually-hidden'
+    );
+    toggleChevron('.header-modal__icon-desktop-doctors use');
+    console.dir(event.target.innerText);
+    console.log('6');
+    return;
+  }
+  if (isModalHidden('.header-modal__services-list--doctors')) {
     toggleClass(mark);
-    toggleClass('modal');
-    latButton = event.target.innerText;
-    console.log('latButton === ""');
+    console.log('7');
     return;
   }
-
-  if (latButton !== 'Послуги') {
-    toggleClass('servicess-desktop');
-    toggleClass('doctors-desktop');
-    console.log("latButton !== 'Послуги'");
-    latButton = event.target.innerText;
-    return;
-  }
-
-  if (isModalHidden()) {
-    toggleClass(mark);
-    toggleClass('modal');
-
-    return;
-
-    // getEl('.header-modal').classList.add('visually-hidden');
-  }
-  if (!isModalHidden()) {
-    getEl('.header-modal').classList.add('visually-hidden');
-    toggleClass(mark);
-    return;
-    // toggleClass('modal');
-    // getEl('.header-modal').classList.add('visually-hidden');
-  }
-  const isHiden = isModalHidden();
-  console.log(isHiden);
-};
-
-const toggleModalDesktopDoctor = (event, mark) => {
-  // console.dir(event.target.innerText === 'Лікарі');
-  if (latButton === '') {
-    toggleClass(mark);
-    toggleClass('modal');
-    console.log('latButton === ""');
-    latButton = event.target.innerText;
-    return;
-  }
-
-  if (latButton !== 'Лікарі') {
-    toggleClass('servicess-desktop');
-    toggleClass('doctors-desktop');
-    console.log("latButton !== 'Лікарі'");
-    latButton = event.target.innerText;
-    return;
-  }
-
-  if (isModalHidden()) {
-    toggleClass(mark);
-    toggleClass('modal');
-    return;
-    // getEl('.header-modal').classList.add('visually-hidden');
-  }
-
-  if (!isModalHidden()) {
-    getEl('.header-modal').classList.add('visually-hidden');
-    toggleClass(mark);
-    return;
-    // toggleClass('modal');
-    // getEl('.header-modal').classList.add('visually-hidden');
-  }
-
-  // if (event.target)
-
-  const isHiden = isModalHidden();
-  console.log(isHiden);
 };
 
 const toggleClass = mark => {
@@ -106,6 +62,7 @@ const toggleClass = mark => {
     );
   }
   if (mark === 'servicess-desktop') {
+    console.log(mark);
     toggleChevron('.header-modal__icon-desktop-servicess use');
     getEl('.header-modal__services-list--servicess').classList.toggle(
       'visually-hidden'
@@ -162,9 +119,9 @@ getEl('#button-doctors').addEventListener('click', () =>
 );
 
 getEl('#button-servicess-desktop').addEventListener('click', () =>
-  toggleModalDesktopService(event, 'servicess-desktop')
+  toggleModalDesktop('servicess-desktop', event)
 );
 
 getEl('#button-doctors-desktop').addEventListener('click', () =>
-  toggleModalDesktopDoctor(event, 'doctors-desktop')
+  toggleModalDesktop('doctors-desktop', event)
 );

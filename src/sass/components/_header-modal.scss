@@ -6,7 +6,7 @@
   z-index: 3;
   @include container(136px 16px 20px 16px, var(--sec-bcg-color));
   @include desktop {
-    @include container(48px 42px 48px 42px, var(--sec-bcg-color));
+    @include container(0 0 0 0, var(--sec-bcg-color));
   }
   display: flex;
   justify-content: center;
@@ -85,7 +85,7 @@
         grid-template-columns: repeat(5, 1fr);
         // flex-direction: row;
         justify-content: space-between;
-        padding-top: 0;
+        padding: 48px 42px;
         gap: 106px;
       }
     }
@@ -95,7 +95,7 @@
         grid-template-columns: repeat(2, 440px);
         grid-template-rows: 136px;
         gap: 72px;
-        padding-top: 0;
+        padding: 48px 42px;
       }
     }
   }

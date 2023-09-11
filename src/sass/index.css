@@ -806,7 +806,7 @@ html {
   .header-modal {
     width: 100%;
     margin: 0 auto;
-    padding: 48px 42px 48px 42px;
+    padding: 0 0 0 0;
     background-color: var(--sec-bcg-color);
   }
 }
@@ -887,7 +887,7 @@ html {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding-top: 0;
+    padding: 48px 42px;
     gap: 106px;
   }
 }
@@ -897,7 +897,7 @@ html {
     grid-template-columns: repeat(2, 440px);
     grid-template-rows: 136px;
     gap: 72px;
-    padding-top: 0;
+    padding: 48px 42px;
   }
 }
 .header-modal__services-title {
