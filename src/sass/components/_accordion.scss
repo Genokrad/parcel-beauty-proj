@@ -7,16 +7,24 @@
     min-width: 904px;
     margin: 0 auto;
   }
+
   &__string-wrapper {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 32px;
     grid-template-rows: auto auto;
     row-gap: 29px;
     column-gap: 16px;
+    cursor: pointer;
     @include tablet {
       grid-template-columns: 1fr 56px;
       align-items: center;
     }
+    // &:hover {
+    //   .accordion__text {
+    //     border-bottom: 2px solid var(--main-text-color);
+    //   }
+    // }
   }
   &__text {
     @include inter-font(500, var(--main-text-color));
@@ -37,6 +45,8 @@
   &__checkbox {
     position: absolute;
     opacity: 0;
+    width: 0;
+    height: 0;
     cursor: pointer;
   }
   &__label {

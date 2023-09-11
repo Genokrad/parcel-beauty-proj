@@ -61,4 +61,27 @@
     padding: 11px 24px;
     line-height: 120%;
   }
+  &--header-modal {
+    @include inter-font(500, var(--white-text-color));
+    // --white-text-color
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 120%;
+    grid-template-columns: 1fr 16px;
+    gap: 4px;
+    &:hover {
+      @include inter-font(500, var(--subtitle-text));
+      background-color: transparent;
+    }
+    &:focus {
+      @include inter-font(500, var(--subtitle-text));
+      background-color: transparent;
+    }
+    &:active {
+      @include inter-font(500, var(--subtitle-text));
+      background-color: transparent;
+    }
+  }
 }

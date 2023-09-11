@@ -1,0 +1,120 @@
+.header-modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  @include container(136px 16px 20px 16px, var(--sec-bcg-color));
+  display: flex;
+  justify-content: center;
+  &__site-navigation-list {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 36px;
+  }
+  &__services-title {
+    @include inter-font(500, var(--accent-color));
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  &__site-navigation-list {
+    min-width: 186px;
+  }
+  &__site-navigation-link {
+    @include inter-font(500, var(--white-text-color));
+    font-size: 16px;
+    line-height: 120%;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--arrow {
+      width: 24px;
+      height: 24px;
+      fill: var(--white-text-color);
+      &:hover {
+        fill: var(--red-text-color);
+      }
+    }
+  }
+  &__services-list {
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__services-title {
+    margin-bottom: 18px;
+  }
+  &__services-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  &__services-sublink {
+    @include inter-font(500, var(--white-text-color));
+    font-size: 14px;
+    line-height: 120%;
+  }
+  &__doctor-item {
+    display: grid;
+    grid-template-columns: 72px 1fr 24px;
+    // grid-template-rows: 72px;
+    gap: 12px;
+    align-items: center;
+  }
+  &__positioner-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__services-wrapper {
+    min-width: 186px;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
+  &__picture-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 72px;
+    height: 72px;
+    &--women {
+      background-color: var(--female-bcg);
+    }
+    &--men {
+      background-color: var(--male-bcg-color);
+    }
+  }
+  &__doctor-img {
+    min-width: 72px;
+    min-height: 72px;
+  }
+  &__doctor-title {
+    @include inter-font(500, var(--white-text-color));
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__doctor-span {
+    @include inter-font(300, var(--white-text-color));
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
