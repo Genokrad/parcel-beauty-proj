@@ -1,7 +1,7 @@
 .header-modal {
   position: absolute;
   // width: 100vw;
-  // min-height: 100vh;
+  min-height: 100vh;
   // height: 100%;
   z-index: 3;
   @include container(136px 16px 20px 16px, var(--sec-bcg-color));

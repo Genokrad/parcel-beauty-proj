@@ -793,6 +793,7 @@ html {
 
 .header-modal {
   position: absolute;
+  min-height: 100vh;
   z-index: 3;
   width: 100%;
   margin: 0 auto;
