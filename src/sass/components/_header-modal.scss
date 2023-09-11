@@ -5,13 +5,23 @@
   // height: 100%;
   z-index: 3;
   @include container(136px 16px 20px 16px, var(--sec-bcg-color));
+  @include desktop {
+    @include container(48px 42px 48px 42px, var(--sec-bcg-color));
+  }
   display: flex;
   justify-content: center;
+  @include desktop {
+    min-height: auto;
+  }
+
   &__site-navigation-list {
     display: flex;
     flex-direction: column;
     // align-items: center;
     gap: 36px;
+    @include desktop {
+      gap: 0;
+    }
   }
   &__services-title {
     @include inter-font(500, var(--accent-color));
@@ -46,11 +56,48 @@
       }
     }
   }
+  &__icon-desktop {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--arrow {
+      width: 24px;
+      height: 24px;
+      fill: var(--white-text-color);
+      &:hover {
+        fill: var(--red-text-color);
+      }
+    }
+  }
   &__services-list {
     padding-top: 36px;
     display: flex;
     flex-direction: column;
     gap: 36px;
+    &--servicess {
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        // flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0;
+        gap: 106px;
+      }
+    }
+    &--doctors {
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 440px);
+        grid-template-rows: 136px;
+        gap: 72px;
+        padding-top: 0;
+      }
+    }
   }
 
   &__services-title {
@@ -72,6 +119,15 @@
     // grid-template-rows: 72px;
     gap: 12px;
     align-items: center;
+    padding: 8px 24px 8px 8px;
+    @include desktop {
+      grid-template-columns: 120px 1fr 24px;
+      gap: 0;
+      border-radius: 22px;
+      &:hover {
+        background-color: rgba(134, 137, 143, 0.2);
+      }
+    }
   }
   &__positioner-title {
     display: flex;
@@ -82,10 +138,20 @@
   &__services-wrapper {
     min-width: 186px;
     margin: 0 auto;
+    // @include desktop {
+    //   min-width: auto;
+    // }
     // display: flex;
     // flex-direction: column;
     // align-items: center;
   }
+
+  &__display {
+    @include desktop {
+      display: none;
+    }
+  }
+
   &__picture-wrapper {
     display: flex;
     align-items: center;
@@ -99,10 +165,18 @@
     &--men {
       background-color: var(--male-bcg-color);
     }
+    @include desktop {
+      width: 120px;
+      height: 120px;
+    }
   }
   &__doctor-img {
     min-width: 72px;
     min-height: 72px;
+    @include desktop {
+      min-width: 120px;
+      min-height: 120px;
+    }
   }
   &__doctor-title {
     @include inter-font(500, var(--white-text-color));
@@ -112,6 +186,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    margin-left: 24px;
   }
   &__doctor-span {
     @include inter-font(300, var(--white-text-color));

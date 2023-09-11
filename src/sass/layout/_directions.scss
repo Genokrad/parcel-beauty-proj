@@ -50,12 +50,22 @@
   &__img {
     margin-bottom: 32px;
     border-radius: 48px;
+
     box-shadow: 1px 25px 14px -12.5px rgba(10, 10, 23, 0.2);
+    @media screen and (min-width: 865px) {
+      border-radius: 58px;
+    }
     @include tablet {
       margin-bottom: 48px;
     }
+    @media screen and (min-width: 981px) {
+      border-radius: 88px;
+    }
     @include desktop {
       margin-bottom: 0;
+    }
+    @media screen and (min-width: 2400px) {
+      border-radius: 100px;
     }
   }
   &__subtitle {

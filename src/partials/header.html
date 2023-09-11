@@ -5,18 +5,40 @@
         ><img class="logo" src="./images/logo.svg" alt="logo"
       /></a>
       <nav class="header__town-navigation">
-        <a class="header__link header__link--active" href="#">Чернівці</a>
-        <a class="header__link" href="#">Буковель</a>
+        <a class="header__link header__link--active" href="">Чернівці</a>
+        <a href="" class="header__link">Буковель</a>
       </nav>
     </div>
 
     <nav class="header__site-navigation">
       <ul class="header__site-navigation-list">
         <li class="header__site-navigation-list">
-          <a class="header__site-navigation-link" href="">Послуги</a>
+          <button
+            class="header__site-navigation-link header__button-chevron"
+            id="button-servicess-desktop"
+            href=""
+          >
+            Послуги
+            <svg
+              class="header-modal__icon-desktop header-modal__icon-desktop-servicess"
+            >
+              <use xlink:href="./images/sprite.svg#chevronBot"></use>
+            </svg>
+          </button>
         </li>
         <li class="header__site-navigation-list">
-          <a class="header__site-navigation-link" href="">Лікарі</a>
+          <button
+            class="header__site-navigation-link header__button-chevron"
+            id="button-doctors-desktop"
+            href=""
+          >
+            Лікарі
+            <svg
+              class="header-modal__icon-desktop header-modal__icon-desktop-doctors"
+            >
+              <use xlink:href="./images/sprite.svg#chevronBot"></use>
+            </svg>
+          </button>
         </li>
         <li class="header__site-navigation-list">
           <a class="header__site-navigation-link" href="./prices.html">Ціни</a>

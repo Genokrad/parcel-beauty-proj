@@ -4,15 +4,19 @@
     <ul class="header-modal__site-navigation-list">
       <li class="header-modal__site-navigation-list">
         <div class="header-modal__services-wrapper">
-          <button class="button button--header-modal">
+          <button
+            class="button button--header-modal header-modal__display"
+            id="button-servicess"
+          >
             Послуги
             <svg class="header-modal__icon">
-              <use xlink:href="./images/sprite.svg#chevronUp"></use>
+              <use xlink:href="./images/sprite.svg#chevronBot"></use>
             </svg>
           </button>
           <ul
             class="header-modal__services-list header-modal__services-list--servicess visually-hidden"
           >
+            <!-- visually-hidden -->
             <li class="header-modal__services-item">
               <h3 class="header-modal__services-title">Груди</h3>
               <nav class="header-modal__services-navigation">
@@ -130,13 +134,22 @@
           </ul>
         </div>
       </li>
-      <li class="header-modal__site-navigation-list">
+      <li
+        class="header-modal__site-navigation-list header-modal__site-navigation-list--desktop"
+      >
         <div class="header-modal__positioner-title">
-          <div class="header-modal__services-wrapper">
+          <!-- // &--desktop {
+            //   @include desktop {
+            //     display: grid;
+            //     grid-template-columns: repeat(5, 1fr);
+            //     flex-direction: row;
+            //   }
+            // } -->
+          <div class="header-modal__services-wrapper header-modal__display">
             <button class="button button--header-modal" id="button-doctors">
               Лікарі
               <svg class="header-modal__icon header-modal__icon--doctors">
-                <use xlink:href="./images/sprite.svg#chevronUp"></use>
+                <use xlink:href="./images/sprite.svg#chevronBot"></use>
               </svg>
             </button>
           </div>
@@ -252,21 +265,21 @@
         </div>
       </li>
       <li class="header-modal__site-navigation-list">
-        <div class="header-modal__services-wrapper">
+        <div class="header-modal__services-wrapper header-modal__display">
           <a class="header-modal__site-navigation-link" href="./prices.html"
             >Ціни</a
           >
         </div>
       </li>
       <li class="header-modal__site-navigation-list">
-        <div class="header-modal__services-wrapper">
+        <div class="header-modal__services-wrapper header-modal__display">
           <a class="header-modal__site-navigation-link" href="./contacts.html"
             >Контакти</a
           >
         </div>
       </li>
       <li class="header-modal__site-navigation-list">
-        <div class="header-modal__services-wrapper">
+        <div class="header-modal__services-wrapper header-modal__display">
           <a class="header-modal__site-navigation-link" href="./questions.html"
             >Питання</a
           >
