@@ -1,0 +1,205 @@
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
+.itc-slider {
+  position: relative;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+  @media screen and (min-width: 834px) {
+    padding-left: 21%;
+  }
+  @media screen and (min-width: 884px) {
+    padding-left: 22%;
+  }
+  @media screen and (min-width: 924px) {
+    padding-left: 23%;
+  }
+  @media screen and (min-width: 964px) {
+    padding-left: 24%;
+  }
+  @media screen and (min-width: 1004px) {
+    padding-left: 25%;
+  }
+  @media screen and (min-width: 1044px) {
+    padding-left: 26%;
+  }
+  @media screen and (min-width: 1084px) {
+    padding-left: 27%;
+  }
+  @media screen and (min-width: 1124px) {
+    padding-left: 28%;
+  }
+  @media screen and (min-width: 1164px) {
+    padding-left: 29%;
+  }
+  @media screen and (min-width: 1204px) {
+    padding-left: 30%;
+  }
+  @media screen and (min-width: 1244px) {
+    padding-left: 31%;
+  }
+  @media screen and (min-width: 1284px) {
+    padding-left: 32%;
+  }
+  @media screen and (min-width: 1324px) {
+    padding-left: 33%;
+  }
+  @media screen and (min-width: 1364px) {
+    padding-left: 33.5%;
+  }
+  @media screen and (min-width: 1404px) {
+    padding-left: 34%;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 34.5%;
+  }
+
+  // @include tablet {
+  //   padding-left: 9%;
+  // }
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // background-color: #eee;
+}
+
+.itc-slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  gap: var(--gap);
+  @include tablet {
+    min-width: 480px;
+    height: 320px;
+  }
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+  @include tablet {
+    flex: 0 0 33%;
+  }
+}
+
+/* кнопки влево и вправо */
+.itc-slider-btn {
+  position: absolute;
+  bottom: -62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  background: rgb(0 0 0 / 20%);
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(249, 248, 244, 0.16);
+  backdrop-filter: blur(8px);
+  @include tablet {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  left: 24px;
+  @media screen and (min-width: 480px) {
+    top: 50%;
+    left: 24px; /* Прижимаем элемент к правой стороне */
+    transform: translateY(-50%);
+  }
+}
+
+.itc-slider-btn-next {
+  right: 24px;
+  @media screen and (min-width: 480px) {
+    top: 50%;
+    right: 24px; /* Прижимаем элемент к правой стороне */
+    transform: translateY(-50%);
+  }
+}
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  background: rgb(0 0 0 / 30%);
+  outline: 0;
+}
+
+.itc-slider-btn::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider-btn-prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.7071 5.29289C14.3166 4.90237 13.6834 4.90237 13.2929 5.29289C12.9024 5.68342 12.9024 6.31658 13.2929 6.70711L17.5858 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H17.5858L13.2929 17.2929C12.9024 17.6834 12.9024 18.3166 13.2929 18.7071C13.6834 19.0976 14.3166 19.0976 14.7071 18.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.7071 5.29289Z' fill='%23F9F8F4'/%3E%3C/svg%3E");
+  transform: rotate(180deg);
+}
+
+.itc-slider-btn-next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.7071 5.29289C14.3166 4.90237 13.6834 4.90237 13.2929 5.29289C12.9024 5.68342 12.9024 6.31658 13.2929 6.70711L17.5858 11H4C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H17.5858L13.2929 17.2929C12.9024 17.6834 12.9024 18.3166 13.2929 18.7071C13.6834 19.0976 14.3166 19.0976 14.7071 18.7071L20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.7071 5.29289Z' fill='%23F9F8F4'/%3E%3C/svg%3E");
+}
+
+/* индикаторы */
+.itc-slider-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -26px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider-indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 20px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  border-radius: 4px;
+  background-color: rgb(255 255 255 / 50%);
+  background-clip: padding-box;
+  // border-top: 15px solid transparent;
+  // border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.itc-slider-indicator-active {
+  background-color: rgb(255 255 255 / 90%);
+}
