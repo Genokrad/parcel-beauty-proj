@@ -1,5 +1,5 @@
 .stats {
-  @include container(96px 24px 48px 24px, var(--bcg-color));
+  @include container(48px 24px 48px 24px, var(--bcg-color));
   display: flex;
   flex-direction: column;
   gap: 32px;

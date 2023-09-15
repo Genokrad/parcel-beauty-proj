@@ -1,4 +1,8 @@
 .logo {
   width: 90px;
   height: 20px;
+  @include desktop {
+    width: 144px;
+    height: 32px;
+  }
 }

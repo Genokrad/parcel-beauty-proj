@@ -11,6 +11,12 @@ const removeClass = event => {
   getElAll('.directions__subtitle--desktop').forEach(item => {
     item.classList.remove('directions__subtitle--desktop-active');
   });
+  getElAll('.directions__data').forEach(item => {
+    item.classList.add('visually-hidden');
+  });
+  // forEach(item => {
+  //   item.classList.remove('directions__subtitle--desktop-active');
+  // });
   event.target.classList.add('directions__subtitle--desktop-active');
   console.log(event.target.innerText);
   if (event.target.innerText === 'Пластична хірургія') {

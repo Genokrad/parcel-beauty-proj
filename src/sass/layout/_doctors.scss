@@ -6,10 +6,10 @@
     @include container(60px 48px 120px 48px, var(--bcg-color));
   }
   @include desktop {
-    @include container(90px 78px 240px 78px, var(--bcg-color));
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 67.9%;
-    gap: 48px;
+    @include container(90px 78px 180px 78px, var(--bcg-color));
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 24px;
   }
   &--procedure {
     grid-template-rows: auto;
@@ -33,6 +33,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      grid-column-start: 1;
+      grid-column-end: 5;
     }
     &--doctors {
       width: 100%;
@@ -47,6 +50,8 @@
     @include desktop {
       font-size: 54px;
       letter-spacing: -2.16px;
+      text-align: center;
+      line-height: 100%;
     }
     &--doctors {
       text-align: center;
@@ -66,6 +71,8 @@
     opacity: 0.8;
     @include desktop {
       font-size: 20px;
+      text-align: center;
+      width: 844px;
     }
   }
   &__cards-wrapper {
@@ -76,12 +83,20 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    @include desktop {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      justify-content: center;
+    }
   }
   &__card {
     position: relative;
     border-radius: 32.8px;
     box-shadow: 1px 25px 14px -12.5px rgba(10, 10, 23, 0.2);
-
+    transition: 0.5s;
     &--male {
       background-color: var(--male-bcg);
       grid-column-start: 1;
@@ -90,12 +105,26 @@
       background-color: var(--female-bcg);
       grid-column-start: 2;
     }
+    @include desktop {
+      width: 200px;
+      height: 480px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      justify-content: center;
+    }
   }
   &__description-wrapper {
     position: absolute;
     bottom: 21px;
     left: 24px;
     width: 240px;
+    transition: 0.5s;
+    @include desktop {
+      overflow: hidden;
+      width: 0;
+      opacity: 0;
+    }
   }
   &__subtitle {
     @include inter-font(500, var(--white-text-color));
@@ -116,5 +145,41 @@
     position: absolute;
     border-radius: 32.8px;
     background: linear-gradient(360deg, #1e1e2b 0%, rgba(30, 30, 43, 0) 49.91%);
+    @include tablet {
+      top: 0;
+      background: linear-gradient(
+        360deg,
+        #1e1e2b 0%,
+        rgba(30, 30, 43, 0) 49.91%
+      );
+      right: 0;
+    }
   }
+}
+
+.doctors-img {
+  @include desktop {
+    height: 480px;
+    width: 400px;
+  }
+}
+
+.doctors__card:hover .doctors__description-wrapper {
+  width: 240px;
+  opacity: 1;
+}
+
+.doctors__card:hover {
+  width: 400px;
+}
+
+.arrow-batton {
+  @include desktop {
+    opacity: 0;
+  }
+}
+
+.doctors__card:hover .arrow-batton {
+  width: auto;
+  opacity: 1;
 }

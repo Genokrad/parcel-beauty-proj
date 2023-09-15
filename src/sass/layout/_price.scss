@@ -18,6 +18,9 @@
       line-height: 100%; /* 54px */
       letter-spacing: -1.08px;
     }
+    @include desktop {
+      line-height: 120%; /* 54px */
+    }
   }
   &__text {
     @include inter-font(300, var(--sec-text-color));

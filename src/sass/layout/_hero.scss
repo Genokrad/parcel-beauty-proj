@@ -10,6 +10,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   @include container(24px 14px 32px 24px, transparent);
+  // @media screen and (min-width: 590px) {
+  //   background-position: center -200px;
+  // }
   @include tablet {
     background-image: url('../images/hero-tablet.jpg');
     grid-template-columns: 528px 1fr;
@@ -21,6 +24,7 @@
   @include desktop {
     background-image: url('../images/bcg-hero-desktop.jpg');
     height: 720px;
+    background-position: top;
   }
 
   &__text {
