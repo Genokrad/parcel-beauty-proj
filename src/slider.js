@@ -1,4 +1,6 @@
-$('.slider').slick({
+const slider = $('.slider');
+
+slider.slick({
   prevArrow: '.custom-prev-button', // Селектор кастомной кнопки "Previous"
   nextArrow: '.custom-next-button', // Селектор кастомной кнопки "Next"
 });
@@ -41,6 +43,11 @@ $('.slider_content').slick({
     // instead of a settings object
   ],
 });
+
+// slider.on('click', 'div[data-slide-index]', function () {
+//   const slideIndex = $(this).data('slide-index');
+//   slider.slick('slickGoTo', parseInt(slideIndex)); // Преобразуем в число
+// });
 
 const openModal = event => {
   toggleClass(event);

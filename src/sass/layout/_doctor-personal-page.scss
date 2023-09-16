@@ -38,6 +38,13 @@
     @include desktop {
       max-width: 904px;
       margin: 0 auto;
+      margin-bottom: 72px;
+    }
+    &--doctor {
+      margin-top: 24px;
+      @include tablet {
+        margin-bottom: 48px;
+      }
     }
   }
   &__text {

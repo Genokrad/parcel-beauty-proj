@@ -18,7 +18,6 @@
   @include desktop {
     max-width: 904px;
     margin: 0 auto;
-    margin-bottom: 24px;
     margin-bottom: 72px;
   }
   &--operation {
@@ -29,6 +28,12 @@
     text-align: center;
     @include tablet {
       line-height: 100%;
+    }
+  }
+  &--doctor {
+    margin-bottom: 12px;
+    @include tablet {
+      margin-bottom: 24px;
     }
   }
 }

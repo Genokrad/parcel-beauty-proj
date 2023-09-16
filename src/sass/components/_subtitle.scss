@@ -32,4 +32,11 @@
       letter-spacing: -0.64px;
     }
   }
+  &--doctor {
+    @include inter-font(500, var(--personal-text));
+    @include tablet {
+      font-size: 24px;
+      letter-spacing: -0.48px;
+    }
+  }
 }
