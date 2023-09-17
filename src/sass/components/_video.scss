@@ -26,6 +26,7 @@
     background-image: url('../images/welcomeImg/welcome-bukovel.jpg');
     background-size: cover;
     transition: 0.5s;
+    box-shadow: 1px 25px 14px -12.5px #0a0a1733;
     @include tablet {
       border-radius: 64px;
       gap: 66px;
@@ -43,6 +44,7 @@
     // background-image: url('../images/welcomeImg/welcome-chernivci.jpg');
     background-size: cover;
     transition: 0.5s;
+    box-shadow: 1px 25px 14px -12.5px #0a0a1733;
     @include tablet {
       border-radius: 36px;
     }

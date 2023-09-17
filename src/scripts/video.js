@@ -7,6 +7,10 @@ const chernovciVideo = document.querySelector('#video-chernovci');
 const chernovciBackdrop = document.querySelector('#backdropp-chernovci');
 const bukovelBackdrop = document.querySelector('#backdropp-bukovel');
 
+window.addEventListener('click', () => {
+  bukovelVideo.play();
+});
+
 chernovciVideo.pause();
 
 let minWidth = '240px';
