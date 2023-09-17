@@ -6,4 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+  &--welcome {
+    background-color: rgba(52, 56, 69, 0.1);
+  }
 }

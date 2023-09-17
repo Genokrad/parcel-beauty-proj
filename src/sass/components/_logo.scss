@@ -5,4 +5,10 @@
     width: 144px;
     height: 32px;
   }
+  &--welcome {
+    @include tablet {
+      width: 144px;
+      height: 32px;
+    }
+  }
 }

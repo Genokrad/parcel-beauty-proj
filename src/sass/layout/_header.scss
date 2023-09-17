@@ -8,6 +8,9 @@
   }
   display: flex;
   align-items: center;
+  &--welcome {
+    background-color: var(--bcg-color);
+  }
   &__button-chevron {
     padding: 0;
     background-color: transparent;
@@ -27,6 +30,15 @@
     @include desktop {
       grid-template-columns: 243px 425px 297px;
     }
+    &--welcome {
+      @include container(16px 16px 16px 16px, var(--bcg-color));
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
   &__town-navigation-wrapper {
     display: grid;
@@ -37,6 +49,14 @@
     max-height: 34px;
     @include desktop {
       gap: 24px;
+    }
+    &--welcome {
+      display: flex;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      @include tablet {
+        justify-content: flex-start;
+      }
     }
   }
   &__town-navigation {
@@ -89,6 +109,15 @@
     @include desktop {
       grid-template-columns: 249;
     }
+    &--welcome {
+      display: none;
+      @include tablet {
+        display: flex;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 62px;
+      }
+    }
   }
 
   &__button-wrapper {
@@ -104,8 +133,18 @@
         display: none;
       }
     }
+    &--footer {
+      display: block;
+      width: 72px;
+      margin: 0 auto;
+    }
     @include tablet {
       display: grid;
+    }
+    &--welcome {
+      @include tablet {
+        grid-template-columns: auto;
+      }
     }
   }
   &__hamburger {

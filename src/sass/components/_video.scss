@@ -1,0 +1,191 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-height: 80vh;
+  @include container(19px 12px 32px 12px, var(--bcg-color));
+  @include tablet {
+    @include container(62px 48px 80px 48px, var(--bcg-color));
+    gap: 66px;
+    min-height: 100vh;
+  }
+
+  @include desktop {
+    @include container(111px 48px 111px 48px, var(--bcg-color));
+    gap: 16px;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  &__wrapper-bukovel {
+    position: relative;
+    width: 336px;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-image: url('../images/welcomeImg/welcome-bukovel.jpg');
+    background-size: cover;
+    transition: 0.5s;
+    @include tablet {
+      border-radius: 64px;
+      gap: 66px;
+    }
+    @include desktop {
+      border-radius: 72px;
+    }
+  }
+  &__wrapper-chernovci {
+    position: relative;
+    width: 240px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+    // background-image: url('../images/welcomeImg/welcome-chernivci.jpg');
+    background-size: cover;
+    transition: 0.5s;
+    @include tablet {
+      border-radius: 36px;
+    }
+  }
+  &__video {
+    margin-top: -15px;
+    width: 120%;
+    height: 120%;
+    @include tablet {
+      margin-top: -30px;
+    }
+    @include desktop {
+      margin-top: -60px;
+    }
+  }
+  &__backdropp {
+    position: absolute;
+    z-index: 4;
+    background-color: var(--sec-bcg-color-transparent60);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    @include tablet {
+      gap: 26px;
+    }
+  }
+  &__title {
+    @include inter-font('500', var(--white-text-color));
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    margin-bottom: 0;
+    @include tablet {
+      font-size: 53px;
+      letter-spacing: -1.054px;
+    }
+    @include desktop {
+      font-size: 40px;
+      letter-spacing: -0.8px;
+    }
+  }
+  &__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+    @include tablet {
+      gap: 26px;
+    }
+  }
+  &__description {
+    @include inter-font('300', var(--white-text-color));
+    opacity: 0.8;
+    width: 266px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 140%;
+    @include tablet {
+      font-size: 26px;
+      width: 584px;
+    }
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+  &__button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0);
+    color: var(--white-text-color);
+    transition: 0.3s;
+    padding: 6px;
+    &:hover {
+      width: 54px;
+      height: 54px;
+      @include tablet {
+        width: 100px;
+        height: 100px;
+      }
+      @include desktop {
+        width: 92px;
+        height: 92px;
+      }
+    }
+    @include tablet {
+      width: 79px;
+      height: 79px;
+      padding: 13px;
+    }
+    @include desktop {
+      width: 68px;
+      height: 68px;
+      padding: 16px;
+    }
+  }
+  &__svg {
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+  &__text {
+    @include inter-font('300', #000);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+#desk-cher {
+  transition: 0.5s;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+#backdropp-chernovci {
+  backdrop-filter: blur(10px);
+}
+
+// .video__wrapper-chernovci:hover .video__wrapper-bukovel {
+//   width: 240px;
+//   height: 150px;
+// }

@@ -9,6 +9,12 @@
   @include desktop {
     @include container(36px 72px 36px 72px, var(--sec-bcg-color));
   }
+  &--welcome {
+    @include container(32px 36px 24px 48px, var(--bcg-color));
+    @include tablet {
+      display: none;
+    }
+  }
   // &__text {
   //   @include inter-font(300, var(--white-text-color));
   //   font-size: 16px;

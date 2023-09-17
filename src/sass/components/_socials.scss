@@ -2,9 +2,18 @@
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
+  &--welcome {
+    @include tablet {
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
   &__list {
     display: flex;
     gap: 32px;
+    &--welcome {
+      gap: 20px;
+    }
   }
   @include tablet {
     justify-content: flex-end;
@@ -19,6 +28,11 @@
     }
     &:focus {
       fill: var(--hover-social);
+    }
+    &--welcome {
+      width: 24px;
+      height: 24px;
+      fill: var(--sec-bcg-color);
     }
   }
 }
