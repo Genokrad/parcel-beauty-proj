@@ -227,6 +227,7 @@ const hideDeskWallCher = () => {
   bukovelWallDesk.style.display = 'none';
 };
 const hideDeskWallBuk = () => {
+  bukovelVideo.play();
   bukovelWallDesk.style.display = 'none';
   chernovciWallDesk.style.display = 'none';
 };

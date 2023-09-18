@@ -99,6 +99,7 @@
     @include inter-font(500, var(--white-text-color));
     font-size: 16px;
     line-height: 120%;
+    cursor: pointer;
   }
 
   &__right-side {
