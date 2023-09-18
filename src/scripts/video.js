@@ -211,6 +211,7 @@ chernovciWrapper.addEventListener('mouseout', () =>
 const showVideBukovel = event => {
   event.target.style.display = 'none';
   chernovciWall.style.display = 'block';
+  bukovelVideo.play();
   // chernovciWall.style.backdropFilter = 'blur(5px)';
   // bukovelWall.style.backdropFilter = 'blur(0px)';
 };
@@ -218,6 +219,7 @@ const showVideBukovel = event => {
 const showVidoeChernovci = event => {
   event.target.style.display = 'none';
   bukovelWall.style.display = 'block';
+  chernovciVideo.play();
   // bukovelWall.style.backdropFilter = 'blur(5px)';
   // chernovciWall.style.backdropFilter = 'blur(0px)';
 };
