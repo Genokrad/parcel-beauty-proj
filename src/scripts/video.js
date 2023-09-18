@@ -11,11 +11,11 @@ const chernovciWall = document.querySelector('#wall-chernovci');
 const bukovelWallDesk = document.querySelector('#wall-bukovel-desktop');
 const chernovciWallDesk = document.querySelector('#wall-chernovci-desktop');
 
-window.addEventListener('click', () => {
-  bukovelVideo.play();
-});
+// window.addEventListener('click', () => {
+//   bukovelVideo.play();
+// });
 
-chernovciVideo.pause();
+// chernovciVideo.pause();
 
 let minWidth = '240px';
 let minHeight = '150px';
