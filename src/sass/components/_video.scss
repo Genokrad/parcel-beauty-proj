@@ -174,6 +174,25 @@
       display: none;
     }
   }
+  &__wall {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0.5;
+    z-index: 5;
+
+    @include desktop {
+      display: none;
+    }
+    &--desktop {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  }
 }
 
 #desk-cher {

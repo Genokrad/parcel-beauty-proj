@@ -6,6 +6,10 @@ const bukovelVideo = document.querySelector('#video-bukovel');
 const chernovciVideo = document.querySelector('#video-chernovci');
 const chernovciBackdrop = document.querySelector('#backdropp-chernovci');
 const bukovelBackdrop = document.querySelector('#backdropp-bukovel');
+const bukovelWall = document.querySelector('#wall-bukovel');
+const chernovciWall = document.querySelector('#wall-chernovci');
+const bukovelWallDesk = document.querySelector('#wall-bukovel-desktop');
+const chernovciWallDesk = document.querySelector('#wall-chernovci-desktop');
 
 window.addEventListener('click', () => {
   bukovelVideo.play();
@@ -125,11 +129,30 @@ function handleViewportChange() {
     );
 
     // Выполните здесь ваш код для средних экранов
-  } else {
+  } else if (viewportWidth >= 360) {
     minWidth = '240px';
     minHeight = '150px';
     maxWidth = '336px';
     maxHeight = '210px';
+    borderRadiusMin = '20px';
+    borderRadiusMax = '24px';
+    sizeZoomOut(
+      bukovelWrapper,
+      chernovciWrapper,
+      descriptionBukovel,
+      descriptionChernovci,
+      bukovelVideo,
+      chernovciVideo,
+      bukovelBackdrop,
+      chernovciBackdrop
+    );
+
+    // Выполните здесь ваш код для маленьких экранов
+  } else {
+    minWidth = '71.5%';
+    minHeight = '62.5%';
+    maxWidth = '100%';
+    maxHeight = '62.5%';
     borderRadiusMin = '20px';
     borderRadiusMax = '24px';
     sizeZoomOut(
@@ -178,3 +201,24 @@ chernovciWrapper.addEventListener('mouseout', () =>
     chernovciBackdrop
   )
 );
+
+const showVideBukovel = event => {
+  console.dir();
+  event.target.style.display = 'none';
+  chernovciWall.style.display = 'block';
+};
+
+const showVidoeChernovci = event => {
+  event.target.style.display = 'none';
+  bukovelWall.style.display = 'block';
+};
+
+const hideDeskWall = () => {
+  chernovciWallDesk.style.display = 'none';
+  bukovelWallDesk.style.display = 'none';
+};
+
+bukovelWall.addEventListener('click', showVideBukovel);
+chernovciWall.addEventListener('click', showVidoeChernovci);
+bukovelWallDesk.addEventListener('click', hideDeskWall);
+chernovciWallDesk.addEventListener('click', hideDeskWall);
