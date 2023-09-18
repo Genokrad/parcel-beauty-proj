@@ -11,11 +11,11 @@ const chernovciWall = document.querySelector('#wall-chernovci');
 const bukovelWallDesk = document.querySelector('#wall-bukovel-desktop');
 const chernovciWallDesk = document.querySelector('#wall-chernovci-desktop');
 
-// window.addEventListener('click', () => {
-//   bukovelVideo.play();
-// });
+window.addEventListener('click', () => {
+  bukovelVideo.play();
+});
 
-// chernovciVideo.pause();
+chernovciVideo.pause();
 
 let minWidth = '240px';
 let minHeight = '150px';
@@ -23,6 +23,8 @@ let maxWidth = '336px';
 let maxHeight = '210px';
 let borderRadiusMin = '20px';
 let borderRadiusMax = '24px';
+let blurMax = 'blur(5px)';
+let blurMin = 'blur(0px)';
 
 const sizeZoom = (
   minimizeSelector,
@@ -50,8 +52,8 @@ const sizeZoom = (
   decriptionHide.style.opacity = '1';
   videoToStop.pause();
   videoToPlay.play();
-  backdropToBlur.style.backdropFilter = 'blur(5px)';
-  backdropToUnBlur.style.backdropFilter = 'blur(0px)';
+  backdropToBlur.style.backdropFilter = blurMax;
+  backdropToUnBlur.style.backdropFilter = blurMin;
 };
 
 const sizeZoomOut = (
@@ -80,8 +82,8 @@ const sizeZoomOut = (
   decriptionHide.style.opacity = '0';
   videoToStop.play();
   videoToPlay.pause();
-  backdropToBlur.style.backdropFilter = 'blur(0px)';
-  backdropToUnBlur.style.backdropFilter = 'blur(5px)';
+  backdropToBlur.style.backdropFilter = blurMin;
+  backdropToUnBlur.style.backdropFilter = blurMax;
 };
 
 function handleViewportChange() {
@@ -97,6 +99,7 @@ function handleViewportChange() {
     maxHeight = '606px';
     borderRadiusMin = '36px';
     borderRadiusMax = '72px';
+    blurMax = 'blur(5px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
@@ -117,6 +120,7 @@ function handleViewportChange() {
     maxHeight = '461px';
     borderRadiusMin = '36px';
     borderRadiusMax = '64px';
+    blurMax = 'blur(0px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
@@ -136,6 +140,7 @@ function handleViewportChange() {
     maxHeight = '210px';
     borderRadiusMin = '20px';
     borderRadiusMax = '24px';
+    blurMax = 'blur(0px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
@@ -155,6 +160,7 @@ function handleViewportChange() {
     maxHeight = '62.5%';
     borderRadiusMin = '20px';
     borderRadiusMax = '24px';
+    blurMax = 'blur(0px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
