@@ -203,7 +203,6 @@ chernovciWrapper.addEventListener('mouseout', () =>
 );
 
 const showVideBukovel = event => {
-  console.dir();
   event.target.style.display = 'none';
   chernovciWall.style.display = 'block';
   chernovciWall.style.backdropFilter = 'blur(5px)';
