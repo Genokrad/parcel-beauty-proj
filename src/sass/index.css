@@ -888,8 +888,8 @@ video::-webkit-media-controls {
 
 .header-modal {
   position: absolute;
-  width: 100vw;
-  height: 120vh;
+  width: 100vw !important;
+  height: 100vh;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -1807,6 +1807,7 @@ video::-webkit-media-controls {
 
 .header {
   background-color: var(--sec-bcg-color);
+  width: 100vw;
   display: flex;
   align-items: center;
 }

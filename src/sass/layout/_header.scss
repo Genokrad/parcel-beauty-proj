@@ -1,5 +1,6 @@
 .header {
   background-color: var(--sec-bcg-color);
+  width: 100vw;
   @include tablet {
     height: 64px;
   }
