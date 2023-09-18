@@ -134,6 +134,11 @@ html {
   overflow: hidden;
 }
 
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 @font-face {
   font-family: "Inter";
   font-weight: 300;

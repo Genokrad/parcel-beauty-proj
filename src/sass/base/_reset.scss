@@ -107,3 +107,8 @@ html {
 .no-scroll {
   overflow: hidden;
 }
+
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+}
