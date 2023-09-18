@@ -120,7 +120,7 @@ function handleViewportChange() {
     maxHeight = '461px';
     borderRadiusMin = '36px';
     borderRadiusMax = '64px';
-    blurMax = 'blur(0px)';
+    blurMax = 'blur(5px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
@@ -140,7 +140,7 @@ function handleViewportChange() {
     maxHeight = '210px';
     borderRadiusMin = '20px';
     borderRadiusMax = '24px';
-    blurMax = 'blur(0px)';
+    blurMax = 'blur(5px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
@@ -160,7 +160,7 @@ function handleViewportChange() {
     maxHeight = '62.5%';
     borderRadiusMin = '20px';
     borderRadiusMax = '24px';
-    blurMax = 'blur(0px)';
+    blurMax = 'blur(5px)';
     sizeZoomOut(
       bukovelWrapper,
       chernovciWrapper,
