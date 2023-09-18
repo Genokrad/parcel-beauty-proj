@@ -224,7 +224,7 @@ const hideDeskWallBuk = () => {
   bukovelWallDesk.style.display = 'none';
 };
 
-bukovelWall.addEventListener('touchstart', showVideBukovel);
-chernovciWall.addEventListener('touchstart', showVidoeChernovci);
+bukovelWall.addEventListener('click', showVideBukovel);
+chernovciWall.addEventListener('click', showVidoeChernovci);
 bukovelWallDesk.addEventListener('click', hideDeskWallBuk);
 chernovciWallDesk.addEventListener('click', hideDeskWallCher);
