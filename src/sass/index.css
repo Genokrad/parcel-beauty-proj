@@ -1793,9 +1793,11 @@ html {
   opacity: 0;
 }
 
-#backdropp-chernovci {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+@media screen and (min-width: 1440px) {
+  #backdropp-chernovci {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
 }
 
 .header {

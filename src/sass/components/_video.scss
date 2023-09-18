@@ -203,7 +203,9 @@
 }
 
 #backdropp-chernovci {
-  backdrop-filter: blur(10px);
+  @include desktop {
+    backdrop-filter: blur(10px);
+  }
 }
 
 // .video__wrapper-chernovci:hover .video__wrapper-bukovel {
