@@ -17,6 +17,9 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    @include desktop {
+      gap: 0px;
+    }
   }
   &__wrapper {
     display: grid;

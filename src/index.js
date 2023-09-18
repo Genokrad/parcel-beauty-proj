@@ -11,6 +11,11 @@ const isModalHidden = selector => {
 // let latButton = '';
 
 const toggleModalDesktop = (mark, event) => {
+  if (event.target !== event.currentTarget) {
+    return;
+  }
+  console.dir(event.target);
+  console.dir(event.currentTarget);
   if (isModalHidden('.header-modal.container')) {
     getEl('.header-modal').classList.toggle('visually-hidden');
     console.log('1');
@@ -126,10 +131,58 @@ getEl('#button-doctors').addEventListener('click', () =>
   toggleClass('doctors')
 );
 
-getEl('#button-servicess-desktop').addEventListener('click', () =>
+getEl('#button-servicess-desktop').addEventListener('mouseover', () =>
   toggleModalDesktop('servicess-desktop', event)
 );
 
-getEl('#button-doctors-desktop').addEventListener('click', () =>
+getEl('#button-servicess-desktop').addEventListener('mouseout', () =>
+  toggleModalDesktop('servicess-desktop', event)
+);
+
+getEl('#button-doctors-desktop').addEventListener('mouseover', () =>
   toggleModalDesktop('doctors-desktop', event)
 );
+getEl('#button-doctors-desktop').addEventListener('mouseout', () =>
+  toggleModalDesktop('doctors-desktop', event)
+);
+
+// getEl('#button-servicess-desktop').addEventListener('mouseover', () =>
+//   toggleModalDesktop('servicess-desktop', event)
+// );
+
+// getEl('#button-doctors-desktop').addEventListener('mouseover', () =>
+//   toggleModalDesktop('doctors-desktop', event)
+// );
+
+// const toggleModalDesktop = (mark, event) => {
+//   console.log(event.target);
+//   if (isModalHidden('.header-modal.container')) {
+//     getEl('.header-modal').classList.toggle('visually-hidden');
+//     console.log('1');
+//   }
+
+//   if (!isModalHidden('.header-modal__services-list--servicess')) {
+//     getEl('.header-modal__services-list--servicess').classList.add(
+//       'visually-hidden'
+//     );
+//     console.dir(event.target.innerText);
+//     toggleChevron('.header-modal__icon-desktop-servicess use');
+//     console.log('5');
+//     return;
+//   }
+
+//   if (!isModalHidden('.header-modal__services-list--doctors')) {
+//     getEl('.header-modal__services-list--doctors').classList.add(
+//       'visually-hidden'
+//     );
+//     toggleChevron('.header-modal__icon-desktop-doctors use');
+//     console.dir(event.target.innerText);
+//     console.log('6');
+//     return;
+//   }
+//   if (isModalHidden('.header-modal__services-list--doctors')) {
+//     toggleClass(mark);
+//     console.log('7');
+//     return;
+//   }
+// };
