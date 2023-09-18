@@ -3501,8 +3501,7 @@ a.price__item-link {
   display: grid;
   grid-template-rows: repeat(6, auto);
   grid-template-columns: auto;
-  -moz-column-gap: 48px;
-       column-gap: 48px;
+  gap: 48px;
   justify-content: center;
 }
 @media screen and (min-width: 834px) {

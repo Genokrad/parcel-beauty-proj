@@ -12,7 +12,7 @@
     display: grid;
     grid-template-rows: repeat(6, auto);
     grid-template-columns: auto;
-    column-gap: 48px;
+    gap: 48px;
     justify-content: center;
     @include tablet {
       grid-template-rows: repeat(3, auto);
