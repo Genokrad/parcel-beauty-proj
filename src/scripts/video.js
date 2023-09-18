@@ -224,9 +224,11 @@ const showVidoeChernovci = event => {
 
 const hideDeskWallCher = () => {
   chernovciWallDesk.style.display = 'none';
+  bukovelWallDesk.style.display = 'none';
 };
 const hideDeskWallBuk = () => {
   bukovelWallDesk.style.display = 'none';
+  chernovciWallDesk.style.display = 'none';
 };
 
 bukovelWall.addEventListener('click', showVideBukovel);
