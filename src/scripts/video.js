@@ -216,10 +216,12 @@ const showVidoeChernovci = event => {
 const hideDeskWallCher = () => {
   chernovciWallDesk.style.display = 'none';
   bukovelWall.style.backdropFilter = 'blur(5px)';
+  chernovciWall.style.backdropFilter = 'blur(0px)';
 };
 const hideDeskWallBuk = () => {
   bukovelWallDesk.style.display = 'none';
   chernovciWall.style.backdropFilter = 'blur(5px)';
+  bukovelWall.style.backdropFilter = 'blur(0px)';
 };
 
 bukovelWall.addEventListener('click', showVideBukovel);
