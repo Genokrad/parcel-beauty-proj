@@ -120,9 +120,11 @@
     left: 24px;
     width: 240px;
     transition: 0.5s;
+    // transition: width 0.7s cubic-bezier(0.7, 0, 0.98, 0.01),
+    //   opacity 0.7s cubic-bezier(0.7, 0, 0.98, 0.01);
     @include desktop {
       overflow: hidden;
-      width: 0;
+      // width: 0;
       opacity: 0;
     }
   }
@@ -165,12 +167,16 @@
 }
 
 .doctors__card:hover .doctors__description-wrapper {
-  width: 240px;
-  opacity: 1;
+  @include desktop {
+    width: 240px;
+    opacity: 1;
+  }
 }
 
 .doctors__card:hover {
-  width: 400px;
+  @include desktop {
+    width: 400px;
+  }
 }
 
 .arrow-batton {
@@ -180,6 +186,8 @@
 }
 
 .doctors__card:hover .arrow-batton {
-  width: auto;
-  opacity: 1;
+  @include desktop {
+    width: auto;
+    opacity: 1;
+  }
 }
