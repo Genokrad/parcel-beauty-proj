@@ -206,25 +206,25 @@ const showVideBukovel = event => {
   console.dir();
   event.target.style.display = 'none';
   chernovciWall.style.display = 'block';
+  chernovciWall.style.backdropFilter = 'blur(5px)';
+  bukovelWall.style.backdropFilter = 'blur(0px)';
 };
 
 const showVidoeChernovci = event => {
   event.target.style.display = 'none';
   bukovelWall.style.display = 'block';
+  bukovelWall.style.backdropFilter = 'blur(5px)';
+  chernovciWall.style.backdropFilter = 'blur(0px)';
 };
 
 const hideDeskWallCher = () => {
   chernovciWallDesk.style.display = 'none';
-  bukovelWall.style.backdropFilter = 'blur(5px)';
-  chernovciWall.style.backdropFilter = 'blur(0px)';
 };
 const hideDeskWallBuk = () => {
   bukovelWallDesk.style.display = 'none';
-  chernovciWall.style.backdropFilter = 'blur(5px)';
-  bukovelWall.style.backdropFilter = 'blur(0px)';
 };
 
 bukovelWall.addEventListener('click', showVideBukovel);
 chernovciWall.addEventListener('click', showVidoeChernovci);
-bukovelWallDesk.addEventListener('click', hideDeskWall);
-chernovciWallDesk.addEventListener('click', hideDeskWall);
+bukovelWallDesk.addEventListener('click', hideDeskWallBuk);
+chernovciWallDesk.addEventListener('click', hideDeskWallCher);
