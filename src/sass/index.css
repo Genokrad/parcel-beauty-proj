@@ -473,6 +473,11 @@ video::-webkit-media-controls {
   height: 32px;
   background-color: transparent;
   color: var(--linguage-text);
+  cursor: pointer;
+}
+.letter-buttton:hover {
+  background-color: rgba(249, 248, 244, 0.2);
+  color: var(--white-text-color);
 }
 .letter-buttton--active {
   background-color: rgba(249, 248, 244, 0.2);
@@ -1905,6 +1910,9 @@ video::-webkit-media-controls {
   font-weight: 500;
   font-family: "Inter", sans-serif;
   color: var(--white-text-color);
+}
+.header__link:hover {
+  background-color: var(--link-active-color);
 }
 .header__link--active {
   background-color: var(--link-active-color);

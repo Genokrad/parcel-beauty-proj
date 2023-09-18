@@ -77,6 +77,10 @@
     font-size: 12px;
     line-height: 120%;
     @include inter-font(500, var(--white-text-color));
+    &:hover {
+      background-color: var(--link-active-color);
+    }
+
     &--active {
       background-color: var(--link-active-color);
     }
