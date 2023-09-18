@@ -211,15 +211,15 @@ chernovciWrapper.addEventListener('mouseout', () =>
 const showVideBukovel = event => {
   event.target.style.display = 'none';
   chernovciWall.style.display = 'block';
-  chernovciWall.style.backdropFilter = 'blur(5px)';
-  bukovelWall.style.backdropFilter = 'blur(0px)';
+  // chernovciWall.style.backdropFilter = 'blur(5px)';
+  // bukovelWall.style.backdropFilter = 'blur(0px)';
 };
 
 const showVidoeChernovci = event => {
   event.target.style.display = 'none';
   bukovelWall.style.display = 'block';
-  bukovelWall.style.backdropFilter = 'blur(5px)';
-  chernovciWall.style.backdropFilter = 'blur(0px)';
+  // bukovelWall.style.backdropFilter = 'blur(5px)';
+  // chernovciWall.style.backdropFilter = 'blur(0px)';
 };
 
 const hideDeskWallCher = () => {
