@@ -3,16 +3,18 @@
   width: 100vw !important;
   height: 100vh;
   // height: 100%;
-
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 56px;
+
   @include container(136px 16px 92px 16px, var(--sec-bcg-color));
   @include desktop {
-    @include container(0 32px 0 32px, var(--sec-bcg-color));
+    @include container(0 32px 0 32px, var(--sec-bcg-color), 100%);
     height: auto;
   }
 

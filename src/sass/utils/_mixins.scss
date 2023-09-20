@@ -13,7 +13,8 @@
 @mixin container(
   // $max-width: 360px,
   $padding: 8px 16px 8px 16px,
-  $background-color: var(--bcg-color)
+  $background-color: var(--bcg-color),
+  $max-width: 1440px
 ) {
   // @if $max-width {
   //   max-width: $max-width;
@@ -25,6 +26,9 @@
   }
   background-color: $background-color;
   max-width: 1440px;
+  @if $max-width {
+    max-width: $max-width;
+  }
 }
 
 @mixin mobile {
