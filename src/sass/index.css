@@ -33,6 +33,10 @@ body.modal-open {
   max-height: 100vh; /* Максимальная высота модального окна */
 }
 
+main {
+  background-color: var(--bcg-color);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -209,6 +213,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 8px 16px 8px 16px;
   background-color: var(--sec-bcg-color);
+  max-width: 1440px;
 }
 
 .logo {
@@ -905,6 +910,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 136px 16px 92px 16px;
   background-color: var(--sec-bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 1440px) {
   .header-modal {
@@ -912,6 +918,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 0 32px 0 32px;
     background-color: var(--sec-bcg-color);
+    max-width: 1440px;
     height: auto;
   }
 }
@@ -1368,8 +1375,8 @@ video::-webkit-media-controls {
 }
 @media screen and (min-width: 834px) {
   .slide {
-    min-width: 480px;
-    min-height: 320px;
+    min-width: 456px;
+    min-height: 304px;
   }
 }
 .slide__img-wrapper {
@@ -1384,8 +1391,8 @@ video::-webkit-media-controls {
 }
 @media screen and (min-width: 834px) {
   .slide__img {
-    width: 240px;
-    height: 320px;
+    width: 228px;
+    height: 304px;
   }
 }
 .slide__before-box {
@@ -1557,6 +1564,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 19px 12px 32px 12px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .video {
@@ -1564,6 +1572,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 62px 48px 80px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
     gap: 66px;
     min-height: 100vh;
   }
@@ -1574,6 +1583,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 111px 48px 111px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
     gap: 16px;
     flex-direction: row-reverse;
     justify-content: center;
@@ -1863,6 +1873,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 16px 16px 16px 16px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
@@ -2022,6 +2033,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 24px 14px 32px 24px;
   background-color: transparent;
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .hero {
@@ -2034,6 +2046,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 48px 48px 48px 48px;
     background-color: transparent;
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2082,6 +2095,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 48px 24px 48px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -2094,6 +2108,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 120px 48px 60px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2105,6 +2120,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 120px 48px 91px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .stats__text {
@@ -2145,6 +2161,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 48px 24px 48px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .directions {
@@ -2152,6 +2169,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 56px 60px 56px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2160,6 +2178,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 56px 90px 56px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .directions__wrapper {
@@ -2290,6 +2309,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 48px 24px 48px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   gap: 48px;
 }
 @media screen and (min-width: 834px) {
@@ -2298,6 +2318,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 24px 60px 24px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
     gap: 72px;
   }
 }
@@ -2310,6 +2331,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 90px 76px 90px 72px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .partners__title {
@@ -2394,6 +2416,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 96px 24px 96px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   display: grid;
   grid-template-rows: auto auto;
 }
@@ -2403,6 +2426,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 48px 120px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2411,6 +2435,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 90px 78px 180px 78px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto auto;
     gap: 24px;
@@ -2426,6 +2451,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 81px 120px 81px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2434,6 +2460,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 60px 296px 120px 296px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
     gap: 0;
   }
 }
@@ -2624,7 +2651,12 @@ video::-webkit-media-controls {
   }
 }
 
+.works-section {
+  background-color: var(--sec-bcg-color);
+}
+
 .works {
+  max-width: 1440px;
   background-color: var(--sec-bcg-color);
   padding-left: 0;
   padding-right: 0;
@@ -2708,6 +2740,7 @@ video::-webkit-media-controls {
   margin: 0 auto;
   padding: 96px 24px 72px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .price {
@@ -2715,6 +2748,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 120px 48px 120px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -2723,6 +2757,7 @@ video::-webkit-media-controls {
     margin: 0 auto;
     padding: 120px 268px 120px 268px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .price__title {
@@ -2948,6 +2983,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 48px 24px 48px 24px;
   background-color: var(--sec-bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .about-clinic__description-wrapper {
@@ -2955,6 +2991,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 99px 48px 99px 48px;
     background-color: transparent;
+    max-width: 1440px;
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -3005,17 +3042,22 @@ a.price__item-link {
 }
 
 .form {
+  background-color: var(--form-bcg-color);
+}
+.form__wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 96px 24px 96px 24px;
   background-color: var(--form-bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
-  .form {
+  .form__wrapper {
     width: 100%;
     margin: 0 auto;
     padding: 120px 15px 120px 15px;
     background-color: var(--form-bcg-color);
+    max-width: 1440px;
   }
 }
 .form__title {
@@ -3104,11 +3146,16 @@ a.price__item-link {
   outline: 2px solid var(--4, #3a3f4b);
 }
 
+footer {
+  background-color: var(--sec-bcg-color);
+}
+
 .footer {
   width: 100%;
   margin: 0 auto;
   padding: 48px 36px 72px 48px;
   background-color: var(--sec-bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .footer {
@@ -3116,6 +3163,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 36px 24px 36px 24px;
     background-color: var(--sec-bcg-color);
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     -moz-column-gap: 44px;
@@ -3128,6 +3176,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 36px 72px 36px 72px;
     background-color: var(--sec-bcg-color);
+    max-width: 1440px;
   }
 }
 .footer--welcome {
@@ -3135,6 +3184,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 32px 36px 24px 48px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .footer--welcome {
@@ -3166,6 +3216,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 32px 16px 60px 16px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   display: grid;
   grid-template-rows: repeat(13, auto);
 }
@@ -3175,6 +3226,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 64px 45px 60px 45px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 
@@ -3183,6 +3235,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 60px 16px 75px 16px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   display: grid;
   grid-template-rows: repeat(13, auto);
 }
@@ -3192,6 +3245,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 60px 48px 91px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 
@@ -3200,6 +3254,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 32px 16px 60px 16px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   display: grid;
   grid-template-rows: repeat(13, auto);
 }
@@ -3209,6 +3264,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 64px 45px 104px 45px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 
@@ -3217,6 +3273,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 32px 24px 72px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .contacts {
@@ -3224,6 +3281,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 64px 48px 60px 48px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .contacts__wrapper {
@@ -3260,6 +3318,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 60px 0 0 0;
   background-color: var(--bcg-color);
+  max-width: 1440px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3282,6 +3341,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 16px 16px 48px 16px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .doctor-personal {
@@ -3289,6 +3349,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 26px 24px 72px 24px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3297,6 +3358,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 67px 120px 72px 120px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .doctor-personal__img-wrapper {
@@ -3362,6 +3424,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 48px 24px 96px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .diplomas {
@@ -3369,6 +3432,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 72px 17px 144px 17px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3377,6 +3441,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 72px 156px 144px 156px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .diplomas__list {
@@ -3407,6 +3472,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 64px 24px 32px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .about-operation {
@@ -3414,6 +3480,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 64px 24px 60px 24px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3422,6 +3489,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 64px 120px 60px 120px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .about-operation__img {
@@ -3490,6 +3558,7 @@ a.price__item-link {
   margin: 0 auto;
   padding: 32px 24px 64px 24px;
   background-color: var(--bcg-color);
+  max-width: 1440px;
 }
 @media screen and (min-width: 834px) {
   .about-price {
@@ -3497,6 +3566,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 60px 36px 120px 36px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -3505,6 +3575,7 @@ a.price__item-link {
     margin: 0 auto;
     padding: 60px 120px 120px 120px;
     background-color: var(--bcg-color);
+    max-width: 1440px;
   }
 }
 .about-price__about-wrapper {

@@ -24,6 +24,7 @@
     padding: $padding;
   }
   background-color: $background-color;
+  max-width: 1440px;
 }
 
 @mixin mobile {

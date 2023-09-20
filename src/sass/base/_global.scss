@@ -48,3 +48,7 @@ body.modal-open {
   overflow-y: auto;
   max-height: 100vh; /* Максимальная высота модального окна */
 }
+
+main {
+  background-color: var(--bcg-color);
+}

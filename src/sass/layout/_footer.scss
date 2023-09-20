@@ -1,3 +1,7 @@
+footer {
+  background-color: var(--sec-bcg-color);
+}
+
 .footer {
   @include container(48px 36px 72px 48px, var(--sec-bcg-color));
   @include tablet {
